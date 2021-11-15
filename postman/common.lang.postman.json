@@ -1,0 +1,554 @@
+{
+    "info": {
+		"_postman_id"   : "535d8bc3-e67c-440d-a6b2-83069fc08ad0",
+		"name"          : "@apps - common/lang",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - commonCreateLang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonCreateLangInput!)\n{\n\tcommonCreateLang (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\", \n\t\t\"name\": \"k\", \n\t\t\"image\": \"3\", \n\t\t\"iso6392\": \"zb\", \n\t\t\"iso6393\": \"ujt\", \n\t\t\"ietf\": \"obsix\", \n\t\t\"customCode\": \"olt3rcrp6t\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 683137, \n\t\t\"isActive\": true\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonCreateLangs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[CommonCreateLangInput]!)\n{\n\tcommonCreateLangs (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"49745216-7dbc-4982-b3e5-564018e36f53\", \n\t\t\t\"name\": \"y\", \n\t\t\t\"image\": \"7\", \n\t\t\t\"iso6392\": \"ms\", \n\t\t\t\"iso6393\": \"99g\", \n\t\t\t\"ietf\": \"058zs\", \n\t\t\t\"customCode\": \"8haxophhy2\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 299333, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"feb19df7-7b42-4c4a-bfde-294acc305fab\", \n\t\t\t\"name\": \"t\", \n\t\t\t\"image\": \"l\", \n\t\t\t\"iso6392\": \"1o\", \n\t\t\t\"iso6393\": \"kft\", \n\t\t\t\"ietf\": \"acmfl\", \n\t\t\t\"customCode\": \"l4xfy8zjfi\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 277785, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"14bc47b4-b697-47de-b8c6-e82d934b5df9\", \n\t\t\t\"name\": \"y\", \n\t\t\t\"image\": \"w\", \n\t\t\t\"iso6392\": \"oj\", \n\t\t\t\"iso6393\": \"rbm\", \n\t\t\t\"ietf\": \"4q1hc\", \n\t\t\t\"customCode\": \"g470xrulb9\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 358144, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"43813f55-6116-4173-bec9-98214b429a7e\", \n\t\t\t\"name\": \"n\", \n\t\t\t\"image\": \"k\", \n\t\t\t\"iso6392\": \"ej\", \n\t\t\t\"iso6393\": \"rs5\", \n\t\t\t\"ietf\": \"yrguy\", \n\t\t\t\"customCode\": \"vb4jlb5c58\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 744907, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"2e9852af-007e-4625-8085-8b56e690127c\", \n\t\t\t\"name\": \"x\", \n\t\t\t\"image\": \"q\", \n\t\t\t\"iso6392\": \"it\", \n\t\t\t\"iso6393\": \"836\", \n\t\t\t\"ietf\": \"fg48x\", \n\t\t\t\"customCode\": \"hp4enruw91\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 126829, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"c489b3be-59b2-49b3-b5be-08c3ee170ca3\", \n\t\t\t\"name\": \"v\", \n\t\t\t\"image\": \"8\", \n\t\t\t\"iso6392\": \"n2\", \n\t\t\t\"iso6393\": \"36i\", \n\t\t\t\"ietf\": \"2svs9\", \n\t\t\t\"customCode\": \"acxdl88jsp\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 179781, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"ffde612f-66c3-410c-936c-67be4dd7c5e3\", \n\t\t\t\"name\": \"9\", \n\t\t\t\"image\": \"5\", \n\t\t\t\"iso6392\": \"w3\", \n\t\t\t\"iso6393\": \"36q\", \n\t\t\t\"ietf\": \"qzo6p\", \n\t\t\t\"customCode\": \"cz45wcygsb\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 903910, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"dc84067e-f470-413a-857a-8d8c6068cee0\", \n\t\t\t\"name\": \"p\", \n\t\t\t\"image\": \"7\", \n\t\t\t\"iso6392\": \"pe\", \n\t\t\t\"iso6393\": \"0kh\", \n\t\t\t\"ietf\": \"nws1t\", \n\t\t\t\"customCode\": \"xse9kvr72l\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 598507, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"015f9dfd-27e9-4142-a800-1264ab270da5\", \n\t\t\t\"name\": \"k\", \n\t\t\t\"image\": \"1\", \n\t\t\t\"iso6392\": \"yx\", \n\t\t\t\"iso6393\": \"bdj\", \n\t\t\t\"ietf\": \"0qd5i\", \n\t\t\t\"customCode\": \"1qt4lv9kxb\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 698099, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"ef195e8c-fdd7-4703-b366-7db8c749d3a9\", \n\t\t\t\"name\": \"v\", \n\t\t\t\"image\": \"k\", \n\t\t\t\"iso6392\": \"ir\", \n\t\t\t\"iso6393\": \"d27\", \n\t\t\t\"ietf\": \"g44am\", \n\t\t\t\"customCode\": \"1z1utpmeg2\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 717738, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"110c9d79-3545-4157-9662-c19bbaf1e5bf\", \n\t\t\t\"name\": \"t\", \n\t\t\t\"image\": \"k\", \n\t\t\t\"iso6392\": \"8f\", \n\t\t\t\"iso6393\": \"89a\", \n\t\t\t\"ietf\": \"lrmrh\", \n\t\t\t\"customCode\": \"gu97wd1ndm\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 606048, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"8ce2c384-a9d7-416a-ba10-47c8af5319ba\", \n\t\t\t\"name\": \"9\", \n\t\t\t\"image\": \"w\", \n\t\t\t\"iso6392\": \"xd\", \n\t\t\t\"iso6393\": \"85y\", \n\t\t\t\"ietf\": \"uoitb\", \n\t\t\t\"customCode\": \"d0tt3jkc1p\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 208978, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"c7d2ff60-b2a1-42e8-830d-2bb4bab371f1\", \n\t\t\t\"name\": \"v\", \n\t\t\t\"image\": \"g\", \n\t\t\t\"iso6392\": \"79\", \n\t\t\t\"iso6393\": \"j6u\", \n\t\t\t\"ietf\": \"n75zr\", \n\t\t\t\"customCode\": \"aqzadg2qxb\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 454231, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"4c7db2fe-e6b3-46a0-8c42-3dc0d47d6ba2\", \n\t\t\t\"name\": \"o\", \n\t\t\t\"image\": \"m\", \n\t\t\t\"iso6392\": \"p3\", \n\t\t\t\"iso6393\": \"1a4\", \n\t\t\t\"ietf\": \"d8lpf\", \n\t\t\t\"customCode\": \"wgrn45g9cz\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 860557, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"e08b433b-e794-4969-a00a-20e3a5c9de1e\", \n\t\t\t\"name\": \"s\", \n\t\t\t\"image\": \"b\", \n\t\t\t\"iso6392\": \"dv\", \n\t\t\t\"iso6393\": \"mls\", \n\t\t\t\"ietf\": \"kjn0f\", \n\t\t\t\"customCode\": \"pgvo1ekyko\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 456326, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"258cda03-ff4b-44b1-8015-faf021bcb78a\", \n\t\t\t\"name\": \"b\", \n\t\t\t\"image\": \"s\", \n\t\t\t\"iso6392\": \"yo\", \n\t\t\t\"iso6393\": \"dc5\", \n\t\t\t\"ietf\": \"9e6gb\", \n\t\t\t\"customCode\": \"xtdlr5ki9q\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 373874, \n\t\t\t\"isActive\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"416ed984-e20c-4a27-8544-5e71e70f7285\", \n\t\t\t\"name\": \"k\", \n\t\t\t\"image\": \"5\", \n\t\t\t\"iso6392\": \"ez\", \n\t\t\t\"iso6393\": \"x0n\", \n\t\t\t\"ietf\": \"e2cjp\", \n\t\t\t\"customCode\": \"tk25iheqdb\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 752351, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"c39adcb1-8dfb-4a32-8bce-f00b434bf9ea\", \n\t\t\t\"name\": \"o\", \n\t\t\t\"image\": \"5\", \n\t\t\t\"iso6392\": \"ch\", \n\t\t\t\"iso6393\": \"qw7\", \n\t\t\t\"ietf\": \"11655\", \n\t\t\t\"customCode\": \"g9i0hd38fa\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 711024, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"ba57a194-7b3e-4759-aef4-267f234117a6\", \n\t\t\t\"name\": \"p\", \n\t\t\t\"image\": \"a\", \n\t\t\t\"iso6392\": \"bm\", \n\t\t\t\"iso6393\": \"lqf\", \n\t\t\t\"ietf\": \"b720a\", \n\t\t\t\"customCode\": \"np2415uj6o\", \n\t\t\t\"dir\": \"LTR\", \n\t\t\t\"sort\": 857188, \n\t\t\t\"isActive\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"9d1df1f8-7f44-4350-a180-84f1ecef0a75\", \n\t\t\t\"name\": \"l\", \n\t\t\t\"image\": \"i\", \n\t\t\t\"iso6392\": \"9q\", \n\t\t\t\"iso6393\": \"ksc\", \n\t\t\t\"ietf\": \"s3pta\", \n\t\t\t\"customCode\": \"xnpsrqzx8w\", \n\t\t\t\"dir\": \"RTL\", \n\t\t\t\"sort\": 527228, \n\t\t\t\"isActive\": false\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonPaginateLangs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tcommonPaginateLangs (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonGetLangs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonGetLangs (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindLang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonFindLang (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindLangById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tcommonFindLangById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonUpdateLang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonUpdateLangInput!)\n{\n\tcommonUpdateLang (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\", \n\t\t\"name\": \"j\", \n\t\t\"image\": \"v\", \n\t\t\"iso6392\": \"1k\", \n\t\t\"iso6393\": \"ttl\", \n\t\t\"ietf\": \"kxg9n\", \n\t\t\"customCode\": \"g0zynblhws\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 581922, \n\t\t\"isActive\": false\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteLangById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tcommonDeleteLangById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteLangs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tcommonDeleteLangs (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\timage\n\t\tiso6392\n\t\tiso6393\n\t\tietf\n\t\tcustomCode\n\t\tdir\n\t\tsort\n\t\tisActive\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/lang",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}
+				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\", \n\t\"name\": \"j\", \n\t\"image\": \"j\", \n\t\"iso6392\": \"y4\", \n\t\"iso6393\": \"elb\", \n\t\"ietf\": \"kuhdr\", \n\t\"customCode\": \"kw9dtn0jd7\", \n\t\"dir\": \"LTR\", \n\t\"sort\": 736212, \n\t\"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/lang",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"lang"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/langs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}
+				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"3e71582d-6ad1-4452-9803-41c15acb5428\", \n\t\t\"name\": \"o\", \n\t\t\"image\": \"o\", \n\t\t\"iso6392\": \"ig\", \n\t\t\"iso6393\": \"j99\", \n\t\t\"ietf\": \"b4w9z\", \n\t\t\"customCode\": \"b3uuzs3cxq\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 212204, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"5103b968-1db2-426a-a528-17d51cf6b37c\", \n\t\t\"name\": \"m\", \n\t\t\"image\": \"1\", \n\t\t\"iso6392\": \"9z\", \n\t\t\"iso6393\": \"ds7\", \n\t\t\"ietf\": \"bd8rj\", \n\t\t\"customCode\": \"gznyfmtxrn\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 661922, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"9927446f-3cc3-4752-94cf-86046a165cb9\", \n\t\t\"name\": \"2\", \n\t\t\"image\": \"b\", \n\t\t\"iso6392\": \"4x\", \n\t\t\"iso6393\": \"bee\", \n\t\t\"ietf\": \"wln0z\", \n\t\t\"customCode\": \"do62nwh21b\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 660462, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"5eab2a44-2ab2-4882-ba3c-b32b28a458f0\", \n\t\t\"name\": \"8\", \n\t\t\"image\": \"t\", \n\t\t\"iso6392\": \"gj\", \n\t\t\"iso6393\": \"n8g\", \n\t\t\"ietf\": \"jv3ou\", \n\t\t\"customCode\": \"qobldpu2e9\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 187572, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"a9468670-7eb3-4af4-905c-29f077664e1f\", \n\t\t\"name\": \"i\", \n\t\t\"image\": \"k\", \n\t\t\"iso6392\": \"mp\", \n\t\t\"iso6393\": \"ns6\", \n\t\t\"ietf\": \"k124f\", \n\t\t\"customCode\": \"4e1pekxi51\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 973557, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"02b6e2a4-a604-4968-900b-00e5d5a94b0e\", \n\t\t\"name\": \"l\", \n\t\t\"image\": \"7\", \n\t\t\"iso6392\": \"k1\", \n\t\t\"iso6393\": \"5ls\", \n\t\t\"ietf\": \"0ds33\", \n\t\t\"customCode\": \"afa4i7n3t2\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 252869, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"a3a32502-1ef6-4025-be7d-7dca451ccf71\", \n\t\t\"name\": \"z\", \n\t\t\"image\": \"4\", \n\t\t\"iso6392\": \"pt\", \n\t\t\"iso6393\": \"4hs\", \n\t\t\"ietf\": \"qhhn7\", \n\t\t\"customCode\": \"4o7f8wfw4v\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 283755, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"7745d377-42c7-45bc-a239-1b0ecccd320f\", \n\t\t\"name\": \"4\", \n\t\t\"image\": \"8\", \n\t\t\"iso6392\": \"3o\", \n\t\t\"iso6393\": \"xbx\", \n\t\t\"ietf\": \"z26ca\", \n\t\t\"customCode\": \"9sq7izcywx\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 623121, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"6d2a127c-802d-42bb-a6da-2ba1d7eb3b38\", \n\t\t\"name\": \"6\", \n\t\t\"image\": \"p\", \n\t\t\"iso6392\": \"vk\", \n\t\t\"iso6393\": \"250\", \n\t\t\"ietf\": \"xlmoi\", \n\t\t\"customCode\": \"rqyzk6pxiq\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 621199, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"a530ee50-988c-4cff-bfbb-66806a476011\", \n\t\t\"name\": \"k\", \n\t\t\"image\": \"j\", \n\t\t\"iso6392\": \"g4\", \n\t\t\"iso6393\": \"p3m\", \n\t\t\"ietf\": \"yurlc\", \n\t\t\"customCode\": \"10kkuzzd98\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 370697, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"f97af067-cb32-44f2-8229-d91d315115c7\", \n\t\t\"name\": \"h\", \n\t\t\"image\": \"y\", \n\t\t\"iso6392\": \"fb\", \n\t\t\"iso6393\": \"u8i\", \n\t\t\"ietf\": \"j8sr9\", \n\t\t\"customCode\": \"j60bw7u02l\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 277747, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"9bef39f7-ca63-4799-96bd-79e2e47d3404\", \n\t\t\"name\": \"p\", \n\t\t\"image\": \"g\", \n\t\t\"iso6392\": \"76\", \n\t\t\"iso6393\": \"1wf\", \n\t\t\"ietf\": \"2188w\", \n\t\t\"customCode\": \"8omadjbyzc\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 348371, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"4d519024-9689-476f-a426-ff6a38e51405\", \n\t\t\"name\": \"1\", \n\t\t\"image\": \"8\", \n\t\t\"iso6392\": \"s8\", \n\t\t\"iso6393\": \"4gv\", \n\t\t\"ietf\": \"cwraq\", \n\t\t\"customCode\": \"829cwe2ldm\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 808248, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"2a3125c6-8375-4baf-8859-cebf56bea33b\", \n\t\t\"name\": \"v\", \n\t\t\"image\": \"2\", \n\t\t\"iso6392\": \"vy\", \n\t\t\"iso6393\": \"q04\", \n\t\t\"ietf\": \"0lv3l\", \n\t\t\"customCode\": \"92rrw7p4r7\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 422455, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"e6757454-29ed-4f01-b97d-b18a8ba78c62\", \n\t\t\"name\": \"j\", \n\t\t\"image\": \"2\", \n\t\t\"iso6392\": \"17\", \n\t\t\"iso6393\": \"wny\", \n\t\t\"ietf\": \"cuqaq\", \n\t\t\"customCode\": \"qlus28dxoc\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 884744, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"d77c3836-191e-4dfd-afa9-67f5e447970b\", \n\t\t\"name\": \"w\", \n\t\t\"image\": \"p\", \n\t\t\"iso6392\": \"bs\", \n\t\t\"iso6393\": \"4ps\", \n\t\t\"ietf\": \"lu0i3\", \n\t\t\"customCode\": \"rvu6qjxeut\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 212918, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"80396993-aefa-4668-97f9-8ee697bcf82d\", \n\t\t\"name\": \"o\", \n\t\t\"image\": \"w\", \n\t\t\"iso6392\": \"g0\", \n\t\t\"iso6393\": \"siw\", \n\t\t\"ietf\": \"p4gz4\", \n\t\t\"customCode\": \"gt9whp2l8x\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 839161, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"001f9d07-21be-4816-885c-8c1a472c3183\", \n\t\t\"name\": \"q\", \n\t\t\"image\": \"t\", \n\t\t\"iso6392\": \"sa\", \n\t\t\"iso6393\": \"ngn\", \n\t\t\"ietf\": \"x3b7a\", \n\t\t\"customCode\": \"waur3jysap\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 639411, \n\t\t\"isActive\": true\n\t}, \n\t{\n\t\t\"id\": \"74bc1219-ae3d-4b04-aa37-a85112b03aa9\", \n\t\t\"name\": \"u\", \n\t\t\"image\": \"i\", \n\t\t\"iso6392\": \"yp\", \n\t\t\"iso6393\": \"bqp\", \n\t\t\"ietf\": \"coxvz\", \n\t\t\"customCode\": \"04ow88w42w\", \n\t\t\"dir\": \"LTR\", \n\t\t\"sort\": 985723, \n\t\t\"isActive\": false\n\t}, \n\t{\n\t\t\"id\": \"ef388046-a4b4-4967-a852-30f0c01f12b1\", \n\t\t\"name\": \"y\", \n\t\t\"image\": \"g\", \n\t\t\"iso6392\": \"42\", \n\t\t\"iso6393\": \"t43\", \n\t\t\"ietf\": \"jcise\", \n\t\t\"customCode\": \"apx9tmttjc\", \n\t\t\"dir\": \"RTL\", \n\t\t\"sort\": 567594, \n\t\t\"isActive\": true\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/langs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"langs"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/langs/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/langs/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+                        "langs",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/langs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/langs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"langs"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/lang",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/lang",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"lang"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/lang/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/lang/42ba2a15-25cf-4ff8-8282-b851a43b82ca",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"lang",
+						"42ba2a15-25cf-4ff8-8282-b851a43b82ca"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/lang",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"42ba2a15-25cf-4ff8-8282-b851a43b82ca\", \n\t\"name\": \"x\", \n\t\"image\": \"n\", \n\t\"iso6392\": \"yr\", \n\t\"iso6393\": \"2kc\", \n\t\"ietf\": \"mrhot\", \n\t\"customCode\": \"ll1zu3u4v2\", \n\t\"dir\": \"RTL\", \n\t\"sort\": 485210, \n\t\"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/lang",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"lang"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/lang/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/lang/42ba2a15-25cf-4ff8-8282-b851a43b82ca",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"lang",
+						"42ba2a15-25cf-4ff8-8282-b851a43b82ca"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - common/langs",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/langs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"langs"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "bd4edb75-d236-42cd-bd6c-444f42da9bb9",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
