@@ -73,6 +73,11 @@ aggregateProperties:
     type: timestamp
     nullable: true
 aggregateI18nProperties:
+  - name: id
+    type: id
+    primaryKey: true
+    length: 36
+    nullable: false
   - name: countryId
     type: id
     length: 36
@@ -99,4 +104,13 @@ aggregateI18nProperties:
   - name: administrativeAreaLevel3
     type: varchar
     length: 50
+    nullable: true
+  - name: createdAt
+    type: timestamp
+    nullable: true
+  - name: updatedAt
+    type: timestamp
+    nullable: true
+  - name: deletedAt
+    type: timestamp
     nullable: true
