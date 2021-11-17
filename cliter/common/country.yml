@@ -86,6 +86,11 @@ aggregateI18nProperties:
     type: id
     length: 36
     nullable: false
+    relationship: many-to-one
+    relationshipAggregate: CommonLang
+    relationshipModulePath: common/lang
+    relationshipKey: id
+    relationshipField: lang
   - name: name
     type: varchar
     nullable: false
