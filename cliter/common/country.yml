@@ -82,6 +82,11 @@ aggregateProperties:
     type: id
     length: 36
     nullable: false
+    relationship: many-to-one
+    relationshipAggregate: CommonCountry
+    relationshipModulePath: common/country
+    relationshipKey: id
+    relationshipField: country
     isI18n: true
   - name: langId
     type: id
