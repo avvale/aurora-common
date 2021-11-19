@@ -3,6 +3,7 @@ boundedContextName: common
 moduleName: country
 moduleNames: countries
 aggregateName: CommonCountry
+hasI18n: true
 hasOAuth: false
 hasTenant: false
 aggregateProperties:
@@ -72,16 +73,18 @@ aggregateProperties:
   - name: deletedAt
     type: timestamp
     nullable: true
-aggregateI18nProperties:
+# aggregateI18nProperties:
   - name: id
     type: id
     primaryKey: true
     length: 36
     nullable: false
+    isI18n: true
   - name: countryId
     type: id
     length: 36
     nullable: false
+    isI18n: true
   - name: langId
     type: id
     length: 36
@@ -91,31 +94,40 @@ aggregateI18nProperties:
     relationshipModulePath: common/lang
     relationshipKey: id
     relationshipField: lang
+    isI18n: true
   - name: name
     type: varchar
     nullable: false
+    isI18n: true
   - name: slug
     type: varchar
     maxLength: 1024
     nullable: false
+    isI18n: true
   - name: administrativeAreaLevel1
     type: varchar
     maxLength: 50
     nullable: true
+    isI18n: true
   - name: administrativeAreaLevel2
     type: varchar
     maxLength: 50
     nullable: true
+    isI18n: true
   - name: administrativeAreaLevel3
     type: varchar
     maxLength: 50
     nullable: true
+    isI18n: true
   - name: createdAt
     type: timestamp
     nullable: true
+    isI18n: true
   - name: updatedAt
     type: timestamp
     nullable: true
+    isI18n: true
   - name: deletedAt
     type: timestamp
     nullable: true
+    isI18n: true
