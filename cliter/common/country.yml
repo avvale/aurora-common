@@ -3,7 +3,6 @@ boundedContextName: common
 moduleName: country
 moduleNames: countries
 aggregateName: CommonCountry
-hasI18n: true
 hasOAuth: false
 hasTenant: false
 aggregateProperties:
@@ -73,7 +72,6 @@ aggregateProperties:
   - name: deletedAt
     type: timestamp
     nullable: true
-# aggregateI18nProperties:
   - name: id
     type: id
     primaryKey: true
