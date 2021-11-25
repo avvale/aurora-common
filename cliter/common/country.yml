@@ -15,18 +15,22 @@ aggregateProperties:
     type: char
     length: 2
     nullable: false
+    index: index
   - name: iso3166Alpha3
     type: char
     length: 3
     nullable: false
+    index: index
   - name: iso3166Numeric
     type: char
     length: 3
     nullable: false
+    index: index
   - name: customCode
     type: varchar
     maxLength: 10
     nullable: true
+    index: index
   - name: prefix
     type: varchar
     maxLength: 5
