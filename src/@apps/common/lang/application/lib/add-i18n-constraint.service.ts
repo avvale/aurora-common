@@ -20,17 +20,24 @@ export class AddI18NConstraintService
         constraint: QueryStatement,
         i18NRelation: string,
         contentLanguage: string,
-        contentLanguageFormat: FormatLangCode = FormatLangCode.ISO6392,
+        {
+            contentLanguageFormat = FormatLangCode.ISO6392,
+            defineDefaultLanguage = true
+        }: {
+            contentLanguageFormat?: FormatLangCode;
+            defineDefaultLanguage?: boolean;
+
+        } = {}
     ): Promise<QueryStatement>
     {
         // get langs from cache
         const langs: LangResponse[] = await this.getLangsCacheService.main();
 
         let lang = langs.find(lang => lang[contentLanguageFormat] === contentLanguage);
-        if (!lang) lang = langs.find(lang => lang[FormatLangCode.ISO6392] === this.configService.get<string>('APP_LANG'));
+        if (!lang && defineDefaultLanguage) lang = langs.find(lang => lang[FormatLangCode.ISO6392] === this.configService.get<string>('APP_LANG'));
 
         // error
-        if (!lang) throw new InternalServerErrorException('APP_LANG_ID must be defined in iso6392 lang code format in .env file');
+        if (!lang && defineDefaultLanguage) throw new InternalServerErrorException('APP_LANG_ID must be defined in iso6392 lang code format in .env file');
 
         return Object.assign(
             {},
@@ -39,9 +46,8 @@ export class AddI18NConstraintService
                 include: {
                     association: i18NRelation,
                     required   : true,
-                    where      : {
-                        langId: lang.id
-                    }
+                    // add lang constrain if is defined
+                    where      : lang ? { langId: lang.id } : undefined
                 }
             }
         );
