@@ -91,6 +91,8 @@ aggregateProperties:
     relationshipModulePath: common/country
     relationshipKey: id
     relationshipField: country
+    index: unique
+    indexName: uniqueLangId
     isI18n: true
   - name: langId
     type: id
@@ -101,6 +103,8 @@ aggregateProperties:
     relationshipModulePath: common/lang
     relationshipKey: id
     relationshipField: lang
+    index: unique
+    indexName: uniqueLangId
     isI18n: true
   - name: name
     type: varchar
