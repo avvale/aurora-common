@@ -5,6 +5,7 @@ import { FormatLangCode, QueryStatement } from 'aurora-ts-core';
 import { Cache } from 'cache-manager';
 import { LangResponse } from '../../domain/lang.response';
 import { GetLangsCacheService } from './get-langs-cache.service';
+import * as _ from 'lodash';
 
 @Injectable()
 export class AddI18NConstraintService
@@ -39,9 +40,8 @@ export class AddI18NConstraintService
         // error
         if (!lang && defineDefaultLanguage) throw new InternalServerErrorException('APP_LANG_ID must be defined in iso6392 lang code format in .env file');
 
-        return Object.assign(
+        return _.merge(
             {},
-            constraint,
             {
                 include: {
                     association: i18NRelation,
@@ -49,7 +49,8 @@ export class AddI18NConstraintService
                     // add lang constrain if is defined
                     where      : lang ? { langId: lang.id } : undefined
                 }
-            }
+            },
+            constraint
         );
     }
 }
