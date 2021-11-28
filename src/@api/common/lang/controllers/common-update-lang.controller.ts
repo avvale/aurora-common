@@ -1,6 +1,6 @@
 import { Controller, Put, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 import { UpdateLangDto } from './../dto/update-lang.dto';
 import { LangDto } from './../dto/lang.dto';
 
@@ -24,7 +24,7 @@ export class CommonUpdateLangController
     @ApiOkResponse({ description: 'The record has been successfully updated.', type: LangDto})
     async main(
         @Body() payload: UpdateLangDto,
-        @Body('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

@@ -1,7 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiQuery } from '@nestjs/swagger';
-import { Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
-import { LangDto } from './../dto/lang.dto';
+import { Constraint, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
@@ -22,7 +21,7 @@ export class CommonPaginateLangsController
     @ApiQuery({ name: 'constraint', type: QueryStatement })
     async main(
         @Body('query') queryStatement?: QueryStatement,
-        @Body('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

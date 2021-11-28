@@ -1,6 +1,6 @@
-import { Controller, Param, Delete, Body } from '@nestjs/common';
+import { Controller, Param, Delete } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
@@ -23,7 +23,7 @@ export class CommonDeleteLangByIdController
     @ApiOkResponse({ description: 'The record has been deleted successfully.', type: LangDto })
     async main(
         @Param('id') id: string,
-        @Body('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

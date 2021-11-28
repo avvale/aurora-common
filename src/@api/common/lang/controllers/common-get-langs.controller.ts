@@ -1,6 +1,6 @@
 import { Controller, Get, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiBody, ApiQuery } from '@nestjs/swagger';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
@@ -22,7 +22,7 @@ export class CommonGetLangsController
     @ApiQuery({ name: 'query', type: QueryStatement })
     async main(
         @Body('query') queryStatement?: QueryStatement,
-        @Body('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

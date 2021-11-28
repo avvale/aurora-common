@@ -1,6 +1,6 @@
-import { Controller, Get, Param, Body } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
@@ -20,7 +20,7 @@ export class CommonFindLangByIdController
     @ApiOkResponse({ description: 'The record has been successfully created.', type: LangDto })
     async main(
         @Param('id') id: string,
-        @Body('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {
