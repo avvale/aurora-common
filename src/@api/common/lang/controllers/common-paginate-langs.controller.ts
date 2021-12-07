@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, HttpCode } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiQuery } from '@nestjs/swagger';
 import { Constraint, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
 
@@ -15,6 +15,7 @@ export class CommonPaginateLangsController
     ) {}
 
     @Post()
+    @HttpCode(200)
     @ApiOperation({ summary: 'Paginate langs' })
     @ApiOkResponse({ description: 'The records has been paginated successfully.', type: Pagination })
     @ApiQuery({ name: 'queryStatement', type: QueryStatement })
