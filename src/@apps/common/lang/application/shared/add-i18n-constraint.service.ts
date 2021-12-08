@@ -43,12 +43,12 @@ export class AddI18NConstraintService
         return _.merge(
             {},
             {
-                include: {
+                include: [{
                     association: i18NRelation,
                     required   : true,
                     // add lang constrain if is defined
                     where      : lang ? { langId: lang.id } : undefined
-                }
+                }]
             },
             constraint
         );
