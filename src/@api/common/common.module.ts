@@ -22,7 +22,7 @@ import { CommonCountryControllers, CommonCountryResolvers } from './country';
         ...CommonRepositories,
         ...CommonSagas,
         ...CommonLangResolvers,
-        ...CommonCountryResolvers
+        ...CommonCountryResolvers,
     ],
 })
 export class CommonModule {}
