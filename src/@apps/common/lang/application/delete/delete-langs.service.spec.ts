@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
 import { EventPublisher, EventBus, CommandBus } from '@nestjs/cqrs';
 
@@ -22,12 +23,12 @@ describe('DeleteLangsService', () =>
                 DeleteLangsService,
                 MockLangRepository,
                 {
-                    provide: ILangRepository,
+                    provide : ILangRepository,
                     useValue: {
-                        get: (queryStatement) => {},
-                        delete: (queryStatement) => {}
+                        get   : (queryStatement) => { /**/ },
+                        delete: (queryStatement) => { /**/ },
                     }
-                }
+                },
             ]
         }).compile();
 

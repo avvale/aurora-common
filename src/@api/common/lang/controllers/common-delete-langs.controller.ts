@@ -20,7 +20,7 @@ export class CommonDeleteLangsController
 
     @Delete()
     @ApiOperation({ summary: 'Delete langs in batch according to query' })
-    @ApiOkResponse({ description: 'The records has been deleted successfully.', type: [LangDto] })
+    @ApiOkResponse({ description: 'The records has been deleted successfully.', type: [LangDto]})
     @ApiBody({ type: QueryStatement })
     @ApiQuery({ name: 'query', type: QueryStatement })
     async main(

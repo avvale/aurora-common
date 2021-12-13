@@ -1,4 +1,6 @@
+/* eslint-disable key-spacing */
 import { AggregateRoot } from '@nestjs/cqrs';
+import { ObjectLiteral, Utils } from 'aurora-ts-core';
 import {
     LangId,
     LangName,
@@ -50,10 +52,10 @@ export class CommonLang extends AggregateRoot
         createdAt: LangCreatedAt,
         updatedAt: LangUpdatedAt,
         deletedAt: LangDeletedAt,
+
     )
     {
         super();
-
         this.id = id;
         this.name = name;
         this.image = image;
@@ -85,6 +87,7 @@ export class CommonLang extends AggregateRoot
         createdAt: LangCreatedAt,
         updatedAt: LangUpdatedAt,
         deletedAt: LangDeletedAt,
+
     ): CommonLang
     {
         return new CommonLang(
@@ -101,6 +104,7 @@ export class CommonLang extends AggregateRoot
             createdAt,
             updatedAt,
             deletedAt,
+
         );
     }
 
@@ -167,7 +171,7 @@ export class CommonLang extends AggregateRoot
         );
     }
 
-    toDTO(): Object
+    toDTO(): ObjectLiteral
     {
         return {
             id: this.id.value,
@@ -185,6 +189,13 @@ export class CommonLang extends AggregateRoot
             deletedAt: this.deletedAt?.value,
 
             // eager relationship
-        }
+        };
+    }
+
+
+    toI18nDTO(): ObjectLiteral
+    {
+        return {
+        };
     }
 }

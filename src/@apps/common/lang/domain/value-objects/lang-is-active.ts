@@ -7,8 +7,8 @@ export class LangIsActive extends BooleanValueObject
     constructor(value: boolean, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangIsActive',
-            nullable: false,
+            name       : 'LangIsActive',
+            nullable   : false,
             undefinable: false,
         }, validationRules));
     }

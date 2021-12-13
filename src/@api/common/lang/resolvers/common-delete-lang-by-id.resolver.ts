@@ -1,5 +1,5 @@
 import { Resolver, Args, Mutation } from '@nestjs/graphql';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
@@ -18,7 +18,7 @@ export class CommonDeleteLangByIdResolver
     @Mutation('commonDeleteLangById')
     async main(
         @Args('id') id: string,
-        @Args('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

@@ -7,11 +7,11 @@ export class LangSort extends SmallintValueObject
     constructor(value: number, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangSort',
-            nullable: true,
+            name       : 'LangSort',
+            nullable   : true,
             undefinable: true,
-            maxLength: 6,
-            unsigned: true,
+            maxLength  : 6,
+            unsigned   : true,
         }, validationRules));
     }
 }

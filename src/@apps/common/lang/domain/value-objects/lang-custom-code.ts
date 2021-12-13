@@ -7,10 +7,10 @@ export class LangCustomCode extends StringValueObject
     constructor(value: string, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangCustomCode',
-            nullable: true,
+            name       : 'LangCustomCode',
+            nullable   : true,
             undefinable: true,
-            maxLength: 10,
+            maxLength  : 10,
         }, validationRules));
     }
 }

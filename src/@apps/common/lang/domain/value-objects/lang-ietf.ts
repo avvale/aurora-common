@@ -7,10 +7,10 @@ export class LangIetf extends StringValueObject
     constructor(value: string, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangIetf',
-            nullable: false,
+            name       : 'LangIetf',
+            nullable   : false,
             undefinable: false,
-            length: 5,
+            length     : 5,
 
         }, validationRules));
     }

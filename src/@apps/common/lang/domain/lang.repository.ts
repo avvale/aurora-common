@@ -1,5 +1,5 @@
 
-import { IRepository, QueryStatement } from 'aurora-ts-core';
+import { IRepository, ObjectLiteral, QueryStatement } from 'aurora-ts-core';
 import { Pagination } from 'aurora-ts-core';
 import { CQMetadata } from 'aurora-ts-core';
 import { CommonLang } from './lang.aggregate';
@@ -16,7 +16,7 @@ export abstract class ILangRepository implements IRepository<CommonLang>
     abstract create(lang: CommonLang): Promise<void>;
 
     // create a single or multiple records
-    abstract insert(langs: CommonLang[], options?: object): Promise<void>;
+    abstract insert(langs: CommonLang[], options?: ObjectLiteral): Promise<void>;
 
     // find a single record
     abstract find(query: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<CommonLang | null>;
@@ -35,4 +35,7 @@ export abstract class ILangRepository implements IRepository<CommonLang>
 
     // delete records
     abstract delete(query: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<void>;
+
+    // count records
+    abstract count(query: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<number>;
 }

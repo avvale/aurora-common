@@ -4,8 +4,8 @@ import { Timezone } from 'aurora-ts-core';
 // @apps
 import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
 import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
-import { CreateLangCommand } from '@apps/common/lang/application/create/create-lang.command';
 import { FindLangByIdQuery } from '@apps/common/lang/application/find/find-lang-by-id.query';
+import { CreateLangCommand } from '@apps/common/lang/application/create/create-lang.command';
 import { CommonCreateLangInput } from './../../../../graphql';
 
 @Resolver()

@@ -1,3 +1,4 @@
+/* eslint-disable key-spacing */
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { CreateLangsCommand } from './create-langs.command';
 import { CreateLangsService } from './create-langs.service';
@@ -29,7 +30,8 @@ export class CreateLangsCommandHandler implements ICommandHandler<CreateLangsCom
         // call to use case and implements ValueObjects
         await this.createLangsService.main(
             command.payload
-                .map(lang => {
+                .map(lang =>
+                {
                     return {
                         id: new LangId(lang.id),
                         name: new LangName(lang.name),
@@ -41,7 +43,7 @@ export class CreateLangsCommandHandler implements ICommandHandler<CreateLangsCom
                         dir: new LangDir(lang.dir),
                         sort: new LangSort(lang.sort),
                         isActive: new LangIsActive(lang.isActive),
-                    }
+                    };
                 })
         );
     }

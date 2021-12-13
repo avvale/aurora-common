@@ -1,3 +1,4 @@
+/* eslint-disable key-spacing */
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { CreateLangCommand } from './create-lang.command';
 import { CreateLangService } from './create-lang.service';

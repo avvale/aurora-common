@@ -1,3 +1,4 @@
+/* eslint-disable key-spacing */
 import { Column, Model, Table, ForeignKey, BelongsTo, HasMany, BelongsToMany, HasOne, Unique, Index } from 'sequelize-typescript';
 import { DataTypes } from 'sequelize';
 
@@ -26,6 +27,7 @@ export class CommonLangModel extends Model<CommonLangModel>
     })
     image: string;
 
+    @Index
     @Column({
         field: 'iso6392',
         allowNull: false,
@@ -33,6 +35,7 @@ export class CommonLangModel extends Model<CommonLangModel>
     })
     iso6392: string;
 
+    @Index
     @Column({
         field: 'iso6393',
         allowNull: false,
@@ -40,6 +43,7 @@ export class CommonLangModel extends Model<CommonLangModel>
     })
     iso6393: string;
 
+    @Index
     @Column({
         field: 'ietf',
         allowNull: false,

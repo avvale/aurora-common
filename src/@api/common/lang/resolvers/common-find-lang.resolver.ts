@@ -1,5 +1,5 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
@@ -16,7 +16,7 @@ export class CommonFindLangResolver
     @Query('commonFindLang')
     async main(
         @Args('query') queryStatement?: QueryStatement,
-        @Args('constraint') constraint?: QueryStatement,
+        @Constraint() constraint?: QueryStatement,
         @Timezone() timezone?: string,
     ): Promise<CommonLang>
     {

@@ -50,20 +50,20 @@ export class MockLangRepository extends MockRepository<CommonLang> implements IL
             itemCollection['deletedAt'] = null;
 
             this.collectionSource.push(CommonLang.register(
-                    new LangId(itemCollection.id),
-                    new LangName(itemCollection.name),
-                    new LangImage(itemCollection.image),
-                    new LangIso6392(itemCollection.iso6392),
-                    new LangIso6393(itemCollection.iso6393),
-                    new LangIetf(itemCollection.ietf),
-                    new LangCustomCode(itemCollection.customCode),
-                    new LangDir(itemCollection.dir),
-                    new LangSort(itemCollection.sort),
-                    new LangIsActive(itemCollection.isActive),
-                    new LangCreatedAt(itemCollection.createdAt),
-                    new LangUpdatedAt(itemCollection.updatedAt),
-                    new LangDeletedAt(itemCollection.deletedAt),
-                ));
+                new LangId(itemCollection.id),
+                new LangName(itemCollection.name),
+                new LangImage(itemCollection.image),
+                new LangIso6392(itemCollection.iso6392),
+                new LangIso6393(itemCollection.iso6393),
+                new LangIetf(itemCollection.ietf),
+                new LangCustomCode(itemCollection.customCode),
+                new LangDir(itemCollection.dir),
+                new LangSort(itemCollection.sort),
+                new LangIsActive(itemCollection.isActive),
+                new LangCreatedAt(itemCollection.createdAt),
+                new LangUpdatedAt(itemCollection.updatedAt),
+                new LangDeletedAt(itemCollection.deletedAt),
+            ));
         }
     }
 }

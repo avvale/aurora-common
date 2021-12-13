@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
 
 // custom items
 import { CommonFindLangController } from './common-find-lang.controller';
 import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
 import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
+
+// sources
 import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
 
 describe('CommonFindLangController', () =>
@@ -15,6 +18,8 @@ describe('CommonFindLangController', () =>
     beforeAll(async () =>
     {
         const module: TestingModule = await Test.createTestingModule({
+            imports: [
+            ],
             controllers: [
                 CommonFindLangController
             ],

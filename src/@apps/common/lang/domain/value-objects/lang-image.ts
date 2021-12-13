@@ -7,8 +7,8 @@ export class LangImage extends StringValueObject
     constructor(value: string, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangImage',
-            nullable: true,
+            name       : 'LangImage',
+            nullable   : true,
             undefinable: true,
             
         }, validationRules));

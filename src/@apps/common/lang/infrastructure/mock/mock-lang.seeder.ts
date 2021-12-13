@@ -33,7 +33,7 @@ export class MockLangSeeder extends MockSeeder<CommonLang>
     {
         this.collectionSource = [];
 
-        for (let lang of langs)
+        for (const lang of langs)
         {
             this.collectionSource.push(
                 CommonLang.register(
@@ -47,8 +47,8 @@ export class MockLangSeeder extends MockSeeder<CommonLang>
                     new LangDir(lang.dir),
                     new LangSort(lang.sort),
                     new LangIsActive(lang.isActive),
-                    new LangCreatedAt({currentTimestamp: true}),
-                    new LangUpdatedAt({currentTimestamp: true}),
+                    new LangCreatedAt({ currentTimestamp: true }),
+                    new LangUpdatedAt({ currentTimestamp: true }),
                     new LangDeletedAt(null),
                 )
             );

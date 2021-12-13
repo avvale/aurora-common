@@ -53,12 +53,11 @@ export class CreateLangService
             payload.dir,
             payload.sort,
             payload.isActive,
-            new LangCreatedAt({currentTimestamp: true}),
-            new LangUpdatedAt({currentTimestamp: true}),
-            null
+            new LangCreatedAt({ currentTimestamp: true }),
+            new LangUpdatedAt({ currentTimestamp: true }),
+            null, // deletedAt
         );
 
-        // create
         await this.repository.create(lang);
 
         // merge EventBus methods with object returned by the repository, to be able to apply and commit events

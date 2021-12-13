@@ -7,8 +7,8 @@ export class LangName extends StringValueObject
     constructor(value: string, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangName',
-            nullable: false,
+            name       : 'LangName',
+            nullable   : false,
             undefinable: false,
             
         }, validationRules));

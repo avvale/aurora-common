@@ -54,9 +54,9 @@ export class CreateLangsService
             lang.dir,
             lang.sort,
             lang.isActive,
-            new LangCreatedAt({currentTimestamp: true}),
-            new LangUpdatedAt({currentTimestamp: true}),
-            null
+            new LangCreatedAt({ currentTimestamp: true }),
+            new LangUpdatedAt({ currentTimestamp: true }),
+            null, // deleteAt
         ));
 
         // insert

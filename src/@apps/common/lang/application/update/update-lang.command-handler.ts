@@ -1,3 +1,4 @@
+/* eslint-disable key-spacing */
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { UpdateLangCommand } from './update-lang.command';
 import { UpdateLangService } from './update-lang.service';
@@ -42,6 +43,6 @@ export class UpdateLangCommandHandler implements ICommandHandler<UpdateLangComma
             },
             command.constraint,
             command.cQMetadata,
-        )
+        );
     }
 }

@@ -7,10 +7,10 @@ export class LangIso6392 extends StringValueObject
     constructor(value: string, validationRules: ValidationRules = {})
     {
         super(value, Object.assign({
-            name: 'LangIso6392',
-            nullable: false,
+            name       : 'LangIso6392',
+            nullable   : false,
             undefinable: false,
-            length: 2,
+            length     : 2,
 
         }, validationRules));
     }

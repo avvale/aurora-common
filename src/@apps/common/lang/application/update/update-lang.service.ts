@@ -57,10 +57,11 @@ export class UpdateLangService
             payload.dir,
             payload.sort,
             payload.isActive,
-            null,
-            new LangUpdatedAt({currentTimestamp: true}),
-            null
+            null, // createdAt
+            new LangUpdatedAt({ currentTimestamp: true }),
+            null, // deletedAt
         );
+
 
         // update
         await this.repository.update(lang, constraint, cQMetadata);
