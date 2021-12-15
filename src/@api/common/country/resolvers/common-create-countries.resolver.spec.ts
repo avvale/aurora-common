@@ -1,9 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonCreateCountriesResolver } from './common-create-countries.resolver';
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { countries } from '@apps/common/country/infrastructure/seeds/country.seed';
 import { CommonCreateCountryInput } from './../../../../graphql';
 

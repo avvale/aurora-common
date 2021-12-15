@@ -1,11 +1,10 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { ApiTags, ApiCreatedResponse, ApiBody, ApiOperation } from '@nestjs/swagger';
-import { Timezone } from 'aurora-ts-core';
+import { ICommandBus, Timezone } from 'aurora-ts-core';
 import { CountryDto } from './../dto/country.dto';
 import { CreateCountryDto } from './../dto/create-country.dto';
 
 // @apps
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
 import { CreateCountriesCommand } from '@apps/common/country/application/create/create-countries.command';
 
 @ApiTags('[common] country')

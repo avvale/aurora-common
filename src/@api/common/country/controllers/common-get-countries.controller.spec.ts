@@ -2,11 +2,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CacheModule } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonGetCountriesController } from './common-get-countries.controller';
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
 import { GetLangsCacheService } from '@apps/common/lang/application/shared/get-langs-cache.service';
 
