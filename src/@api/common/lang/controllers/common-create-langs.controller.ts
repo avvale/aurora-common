@@ -1,11 +1,10 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { ApiTags, ApiCreatedResponse, ApiBody, ApiOperation } from '@nestjs/swagger';
-import { Timezone } from 'aurora-ts-core';
+import { ICommandBus, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 import { CreateLangDto } from './../dto/create-lang.dto';
 
 // @apps
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
 import { CreateLangsCommand } from '@apps/common/lang/application/create/create-langs.command';
 
 @ApiTags('[common] lang')

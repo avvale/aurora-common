@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
-
+import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonPaginateLangsResolver } from './common-paginate-langs.resolver';
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 
 // sources
 import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';

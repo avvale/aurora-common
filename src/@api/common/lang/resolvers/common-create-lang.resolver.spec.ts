@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
+import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonCreateLangResolver } from './common-create-lang.resolver';
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { CommonCreateLangInput } from './../../../../graphql';
 
 // sources

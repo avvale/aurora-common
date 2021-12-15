@@ -1,9 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonCreateLangsResolver } from './common-create-langs.resolver';
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
 import { CommonCreateLangInput } from './../../../../graphql';
 

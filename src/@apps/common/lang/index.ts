@@ -75,6 +75,8 @@ export const CommonLangServices = [
     UpdateLangService,
     DeleteLangByIdService,
     DeleteLangsService,
+
+    // custom
     AddI18NConstraintService,
     GetLangsCacheService,
 ];

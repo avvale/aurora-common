@@ -1,12 +1,10 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { ApiTags, ApiCreatedResponse, ApiOperation } from '@nestjs/swagger';
-import { Timezone } from 'aurora-ts-core';
+import { ICommandBus, IQueryBus, Timezone } from 'aurora-ts-core';
 import { CreateLangDto } from './../dto/create-lang.dto';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { ICommandBus } from '@aurora/cqrs/domain/command-bus';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { FindLangByIdQuery } from '@apps/common/lang/application/find/find-lang-by-id.query';
 import { CreateLangCommand } from '@apps/common/lang/application/create/create-lang.command';
 
