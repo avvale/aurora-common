@@ -1,7 +1,6 @@
 import { CACHE_MANAGER, Inject, Injectable, InternalServerErrorException } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
-import { FormatLangCode, QueryStatement } from 'aurora-ts-core';
+import { ConfigService,  } from '@nestjs/config';
+import { FormatLangCode, IQueryBus, QueryStatement } from 'aurora-ts-core';
 import { Cache } from 'cache-manager';
 import { LangResponse } from '../../domain/lang.response';
 import { GetLangsCacheService } from './get-langs-cache.service';

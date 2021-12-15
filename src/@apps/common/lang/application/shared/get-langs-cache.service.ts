@@ -1,5 +1,5 @@
 import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
+import { IQueryBus } from 'aurora-ts-core';
 import { Cache } from 'cache-manager';
 import { LangResponse } from '../../domain/lang.response';
 import { GetLangsQuery } from '../get/get-langs.query';
