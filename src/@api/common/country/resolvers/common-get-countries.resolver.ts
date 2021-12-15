@@ -1,8 +1,7 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, ContentLanguage, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { GetCountriesQuery } from '@apps/common/country/application/get/get-countries.query';
 import { CommonCountry } from './../../../../graphql';
 import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';

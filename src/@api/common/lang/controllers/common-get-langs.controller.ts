@@ -1,10 +1,9 @@
 import { Controller, Get, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiBody, ApiQuery } from '@nestjs/swagger';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { GetLangsQuery } from '@apps/common/lang/application/get/get-langs.query';
 
 @ApiTags('[common] lang')

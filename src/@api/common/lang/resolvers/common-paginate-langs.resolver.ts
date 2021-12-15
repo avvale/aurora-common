@@ -1,8 +1,7 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { PaginateLangsQuery } from '@apps/common/lang/application/paginate/paginate-langs.query';
 import { Pagination } from './../../../../graphql';
 

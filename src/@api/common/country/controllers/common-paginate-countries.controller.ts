@@ -1,10 +1,9 @@
 import { Controller, Post, Body, HttpCode } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiQuery } from '@nestjs/swagger';
-import { Constraint, ContentLanguage, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, ContentLanguage, IQueryBus, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { PaginateCountriesQuery } from '@apps/common/country/application/paginate/paginate-countries.query';
 import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
 

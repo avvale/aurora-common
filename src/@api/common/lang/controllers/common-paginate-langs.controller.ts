@@ -1,10 +1,9 @@
 import { Controller, Post, Body, HttpCode } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiQuery } from '@nestjs/swagger';
-import { Constraint, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, IQueryBus, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { PaginateLangsQuery } from '@apps/common/lang/application/paginate/paginate-langs.query';
 
 @ApiTags('[common] lang')

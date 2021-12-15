@@ -1,10 +1,9 @@
 import { Controller, Get, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiBody, ApiQuery } from '@nestjs/swagger';
-import { Constraint, ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, ContentLanguage, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { IQueryBus } from '@aurora/cqrs/domain/query-bus';
 import { FindCountryQuery } from '@apps/common/country/application/find/find-country.query';
 import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
 
