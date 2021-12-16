@@ -1,11 +1,9 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, ContentLanguage, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, AddI18NConstraintService, ContentLanguage, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { PaginateCountriesQuery } from '@apps/common/country/application/paginate/paginate-countries.query';
 import { Pagination } from './../../../../graphql';
-import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
-
 
 @Resolver()
 export class CommonPaginateCountriesResolver

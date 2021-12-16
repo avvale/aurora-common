@@ -2,12 +2,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CacheModule, CACHE_MANAGER } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { ICommandBus, IQueryBus } from 'aurora-ts-core';
+import { AddI18NConstraintService, ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonUpdateCountryResolver } from './common-update-country.resolver';
 import { CommonUpdateCountryInput } from './../../../../graphql';
-import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
 
 // sources
 import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
@@ -35,6 +34,16 @@ describe('CommonUpdateCountryResolver', () =>
                     }
                 },
                 {
+                    provide : CACHE_MANAGER,
+                    useValue: {
+                        get: (key: string) =>
+                        {
+                            console.log(key);
+                            return key === 'common/lang' ? langs : null;
+                        },
+                    }
+                },
+                {
                     provide : IQueryBus,
                     useValue: {
                         ask: () => { /**/ },
@@ -44,16 +53,6 @@ describe('CommonUpdateCountryResolver', () =>
                     provide : ICommandBus,
                     useValue: {
                         dispatch: () => { /**/ },
-                    }
-                },
-                {
-                    provide : CACHE_MANAGER,
-                    useValue: {
-                        get: (key: string) =>
-                        {
-                            console.log(key);
-                            return key === 'common/lang' ? langs : null;
-                        },
                     }
                 },
             ]

@@ -29,9 +29,6 @@ import { UpdateLangService } from './application/update/update-lang.service';
 import { DeleteLangByIdService } from './application/delete/delete-lang-by-id.service';
 import { DeleteLangsService } from './application/delete/delete-langs.service';
 
-// custom
-import { AddI18NConstraintService } from './application/shared/add-i18n-constraint.service';
-
 // models
 export { CommonLangModel } from './infrastructure/sequelize/sequelize-lang.model';
 
@@ -74,7 +71,4 @@ export const CommonLangServices = [
     UpdateLangService,
     DeleteLangByIdService,
     DeleteLangsService,
-
-    // custom
-    AddI18NConstraintService,
 ];
