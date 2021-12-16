@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
-import { CacheModule } from '@nestjs/common';
+import { CacheModule, CACHE_MANAGER } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonFindCountryController } from './common-find-country.controller';
 import { AddI18NConstraintService } from '@apps/common/lang/application/shared/add-i18n-constraint.service';
-import { GetLangsCacheService } from '@apps/common/lang/application/shared/get-langs-cache.service';
 
 // sources
 import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
@@ -37,12 +36,6 @@ describe('CommonFindCountryController', () =>
                     }
                 },
                 {
-                    provide : GetLangsCacheService,
-                    useValue: {
-                        main: () => langs,
-                    }
-                },
-                {
                     provide : IQueryBus,
                     useValue: {
                         ask: () => { /**/ },
@@ -52,6 +45,16 @@ describe('CommonFindCountryController', () =>
                     provide : ICommandBus,
                     useValue: {
                         dispatch: () => { /**/ },
+                    }
+                },
+                {
+                    provide : CACHE_MANAGER,
+                    useValue: {
+                        get: (key: string) =>
+                        {
+                            console.log(key);
+                            return key === 'common/lang' ? langs : null;
+                        },
                     }
                 },
             ]

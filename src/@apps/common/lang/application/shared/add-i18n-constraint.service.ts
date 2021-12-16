@@ -32,7 +32,7 @@ export class AddI18NConstraintService
             iso6392: string;
             iso6393: string;
             ietf: string;
-        }[] = await this.cacheManager.get('common/lang');
+        }[] = await this.cacheManager.get('common/lang') || [];
 
         let lang = langs.find(lang => lang[contentLanguageFormat] === contentLanguage);
         if (!lang && defineDefaultLanguage) lang = langs.find(lang => lang[FormatLangCode.ISO6392] === this.configService.get<string>('APP_LANG'));
