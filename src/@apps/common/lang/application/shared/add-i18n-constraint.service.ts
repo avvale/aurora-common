@@ -1,7 +1,6 @@
-import { CACHE_MANAGER, Inject, Injectable, InternalServerErrorException } from '@nestjs/common';
-import { ConfigService,  } from '@nestjs/config';
-import { FormatLangCode, IQueryBus, QueryStatement } from 'aurora-ts-core';
-import { Cache } from 'cache-manager';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { FormatLangCode, QueryStatement } from 'aurora-ts-core';
 import { LangResponse } from '../../domain/lang.response';
 import { GetLangsCacheService } from './get-langs-cache.service';
 import * as _ from 'lodash';
@@ -10,8 +9,6 @@ import * as _ from 'lodash';
 export class AddI18NConstraintService
 {
     constructor(
-        private readonly queryBus: IQueryBus,
-        @Inject(CACHE_MANAGER) private cacheManager: Cache,
         private readonly configService: ConfigService,
         private readonly getLangsCacheService: GetLangsCacheService,
     ) {}
