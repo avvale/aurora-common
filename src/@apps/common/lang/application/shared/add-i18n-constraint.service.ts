@@ -1,16 +1,15 @@
-import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import { CACHE_MANAGER, Inject, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { FormatLangCode, QueryStatement } from 'aurora-ts-core';
-import { LangResponse } from '../../domain/lang.response';
-import { GetLangsCacheService } from './get-langs-cache.service';
+import { Cache } from 'cache-manager';
 import * as _ from 'lodash';
 
 @Injectable()
 export class AddI18NConstraintService
 {
     constructor(
-        private readonly configService: ConfigService,
-        private readonly getLangsCacheService: GetLangsCacheService,
+        @Inject(CACHE_MANAGER) private cacheManager: Cache,
+        private readonly configService: ConfigService
     ) {}
 
     public async main(
@@ -27,8 +26,13 @@ export class AddI18NConstraintService
         } = {}
     ): Promise<QueryStatement>
     {
-        // get langs from cache
-        const langs: LangResponse[] = await this.getLangsCacheService.main();
+        // get langs from cache manager, previous loaded in common module in onApplicationBootstrap hook
+        const langs: {
+            id: string;
+            iso6392: string;
+            iso6393: string;
+            ietf: string;
+        }[] = await this.cacheManager.get('common/lang');
 
         let lang = langs.find(lang => lang[contentLanguageFormat] === contentLanguage);
         if (!lang && defineDefaultLanguage) lang = langs.find(lang => lang[FormatLangCode.ISO6392] === this.configService.get<string>('APP_LANG'));
