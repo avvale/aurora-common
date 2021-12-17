@@ -2,7 +2,7 @@ import { Resolver, Args, Query } from '@nestjs/graphql';
 import { Constraint, AddI18NConstraintService, ContentLanguage, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindCountryQuery } from '@apps/common/country/application/find/find-country.query';
+import { FindCountryQuery } from '../../../../@apps/common/country/application/find/find-country.query';
 import { CommonCountry } from './../../../../graphql';
 
 @Resolver()

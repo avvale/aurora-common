@@ -3,7 +3,7 @@ import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonCreateLangsResolver } from './common-create-langs.resolver';
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 import { CommonCreateLangInput } from './../../../../graphql';
 
 describe('CommonCreateLangsResolver', () =>

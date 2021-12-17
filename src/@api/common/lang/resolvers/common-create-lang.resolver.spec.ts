@@ -7,7 +7,7 @@ import { CommonCreateLangResolver } from './common-create-lang.resolver';
 import { CommonCreateLangInput } from './../../../../graphql';
 
 // sources
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 
 describe('CommonCreateLangResolver', () =>
 {

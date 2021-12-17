@@ -4,8 +4,8 @@ import { Constraint, AddI18NConstraintService, ContentLanguage, ICommandBus, IQu
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { GetCountriesQuery } from '@apps/common/country/application/get/get-countries.query';
-import { DeleteCountriesCommand } from '@apps/common/country/application/delete/delete-countries.command';
+import { GetCountriesQuery } from '../../../../@apps/common/country/application/get/get-countries.query';
+import { DeleteCountriesCommand } from '../../../../@apps/common/country/application/delete/delete-countries.command';
 
 @ApiTags('[common] country')
 @Controller('common/countries')

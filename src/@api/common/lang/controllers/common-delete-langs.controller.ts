@@ -4,8 +4,8 @@ import { Constraint, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'au
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { GetLangsQuery } from '@apps/common/lang/application/get/get-langs.query';
-import { DeleteLangsCommand } from '@apps/common/lang/application/delete/delete-langs.command';
+import { GetLangsQuery } from '../../../../@apps/common/lang/application/get/get-langs.query';
+import { DeleteLangsCommand } from '../../../../@apps/common/lang/application/delete/delete-langs.command';
 
 @ApiTags('[common] lang')
 @Controller('common/langs')

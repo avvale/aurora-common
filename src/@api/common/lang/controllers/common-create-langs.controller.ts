@@ -5,7 +5,7 @@ import { LangDto } from './../dto/lang.dto';
 import { CreateLangDto } from './../dto/create-lang.dto';
 
 // @apps
-import { CreateLangsCommand } from '@apps/common/lang/application/create/create-langs.command';
+import { CreateLangsCommand } from '../../../../@apps/common/lang/application/create/create-langs.command';
 
 @ApiTags('[common] lang')
 @Controller('common/langs')

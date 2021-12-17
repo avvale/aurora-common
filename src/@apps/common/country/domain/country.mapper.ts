@@ -25,7 +25,7 @@ import {
     CountryI18NAdministrativeAreaLevel2,
     CountryI18NAdministrativeAreaLevel3,
 } from './value-objects';
-import { LangMapper } from '@apps/common/lang/domain/lang.mapper';
+import { LangMapper } from '../../../../@apps/common/lang/domain/lang.mapper';
 
 export class CountryMapper implements IMapper
 {

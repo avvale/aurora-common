@@ -4,7 +4,7 @@ import { Constraint, AddI18NConstraintService, ContentLanguage, IQueryBus, Pagin
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { PaginateCountriesQuery } from '@apps/common/country/application/paginate/paginate-countries.query';
+import { PaginateCountriesQuery } from '../../../../@apps/common/country/application/paginate/paginate-countries.query';
 
 @ApiTags('[common] country')
 @Controller('common/countries/paginate')

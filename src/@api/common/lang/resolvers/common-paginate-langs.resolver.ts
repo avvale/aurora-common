@@ -2,7 +2,7 @@ import { Resolver, Args, Query } from '@nestjs/graphql';
 import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { PaginateLangsQuery } from '@apps/common/lang/application/paginate/paginate-langs.query';
+import { PaginateLangsQuery } from '../../../../@apps/common/lang/application/paginate/paginate-langs.query';
 import { Pagination } from './../../../../graphql';
 
 @Resolver()

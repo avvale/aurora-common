@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { EventPublisher, EventBus, CommandBus } from '@nestjs/cqrs';
 
 // custom items
-import { countries } from '@apps/common/country/infrastructure/seeds/country.seed';
+import { countries } from '../../../../../@apps/common/country/infrastructure/seeds/country.seed';
 import { UpdateCountryService } from './update-country.service';
 import {
     CountryId,

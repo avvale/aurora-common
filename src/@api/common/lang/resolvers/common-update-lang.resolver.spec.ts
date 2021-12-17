@@ -7,7 +7,7 @@ import { CommonUpdateLangResolver } from './common-update-lang.resolver';
 import { CommonUpdateLangInput } from './../../../../graphql';
 
 // sources
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 
 describe('CommonUpdateLangResolver', () =>
 {

@@ -2,8 +2,8 @@ import { Resolver, Args, Mutation } from '@nestjs/graphql';
 import { AddI18NConstraintService, FormatLangCode, ICommandBus, IQueryBus, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindCountryByIdQuery } from '@apps/common/country/application/find/find-country-by-id.query';
-import { CreateCountryCommand } from '@apps/common/country/application/create/create-country.command';
+import { FindCountryByIdQuery } from '../../../../@apps/common/country/application/find/find-country-by-id.query';
+import { CreateCountryCommand } from '../../../../@apps/common/country/application/create/create-country.command';
 import { CommonCreateCountryInput } from './../../../../graphql';
 
 @Resolver()

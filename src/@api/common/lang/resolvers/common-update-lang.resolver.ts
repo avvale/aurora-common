@@ -2,8 +2,8 @@ import { Resolver, Args, Mutation } from '@nestjs/graphql';
 import { Constraint, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindLangByIdQuery } from '@apps/common/lang/application/find/find-lang-by-id.query';
-import { UpdateLangCommand } from '@apps/common/lang/application/update/update-lang.command';
+import { FindLangByIdQuery } from '../../../../@apps/common/lang/application/find/find-lang-by-id.query';
+import { UpdateLangCommand } from '../../../../@apps/common/lang/application/update/update-lang.command';
 import { CommonUpdateLangInput } from './../../../../graphql';
 
 @Resolver()

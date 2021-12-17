@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 // custom items
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 import { UpdateLangCommandHandler } from './update-lang.command-handler';
 import { UpdateLangCommand } from './update-lang.command';
 import { UpdateLangService } from './update-lang.service';

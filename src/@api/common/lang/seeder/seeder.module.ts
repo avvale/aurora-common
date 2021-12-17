@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { SharedModule } from '@aurora/shared.module';
+import { SharedModule } from '../../../../@aurora/shared.module';
 import { SequelizeConfigModule } from 'aurora-ts-core';
 import { CommonModule } from 'src/@api/common/common.module';
 

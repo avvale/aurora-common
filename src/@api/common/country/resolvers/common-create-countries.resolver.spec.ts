@@ -3,7 +3,7 @@ import { ICommandBus, IQueryBus } from 'aurora-ts-core';
 
 // custom items
 import { CommonCreateCountriesResolver } from './common-create-countries.resolver';
-import { countries } from '@apps/common/country/infrastructure/seeds/country.seed';
+import { countries } from '../../../../@apps/common/country/infrastructure/seeds/country.seed';
 import { CommonCreateCountryInput } from './../../../../graphql';
 
 describe('CommonCreateCountriesResolver', () =>

@@ -4,7 +4,7 @@ import { Constraint, IQueryBus, Pagination, QueryStatement, Timezone } from 'aur
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { PaginateLangsQuery } from '@apps/common/lang/application/paginate/paginate-langs.query';
+import { PaginateLangsQuery } from '../../../../@apps/common/lang/application/paginate/paginate-langs.query';
 
 @ApiTags('[common] lang')
 @Controller('common/langs/paginate')

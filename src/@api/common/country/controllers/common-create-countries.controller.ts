@@ -5,7 +5,7 @@ import { CountryDto } from './../dto/country.dto';
 import { CreateCountryDto } from './../dto/create-country.dto';
 
 // @apps
-import { CreateCountriesCommand } from '@apps/common/country/application/create/create-countries.command';
+import { CreateCountriesCommand } from '../../../../@apps/common/country/application/create/create-countries.command';
 
 @ApiTags('[common] country')
 @Controller('common/countries')

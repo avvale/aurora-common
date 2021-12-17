@@ -2,7 +2,7 @@ import { Resolver, Args, Mutation } from '@nestjs/graphql';
 import { ICommandBus, IQueryBus, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { CreateCountriesCommand } from '@apps/common/country/application/create/create-countries.command';
+import { CreateCountriesCommand } from '../../../../@apps/common/country/application/create/create-countries.command';
 import { CommonCreateCountryInput } from './../../../../graphql';
 
 @Resolver()

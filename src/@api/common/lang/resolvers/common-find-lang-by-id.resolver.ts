@@ -2,7 +2,7 @@ import { Resolver, Args, Query } from '@nestjs/graphql';
 import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindLangByIdQuery } from '@apps/common/lang/application/find/find-lang-by-id.query';
+import { FindLangByIdQuery } from '../../../../@apps/common/lang/application/find/find-lang-by-id.query';
 import { CommonLang } from './../../../../graphql';
 
 @Resolver()

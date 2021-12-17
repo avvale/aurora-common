@@ -5,8 +5,8 @@ import { CreateCountryDto } from './../dto/create-country.dto';
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { FindCountryByIdQuery } from '@apps/common/country/application/find/find-country-by-id.query';
-import { CreateCountryCommand } from '@apps/common/country/application/create/create-country.command';
+import { FindCountryByIdQuery } from '../../../../@apps/common/country/application/find/find-country-by-id.query';
+import { CreateCountryCommand } from '../../../../@apps/common/country/application/create/create-country.command';
 
 @ApiTags('[common] country')
 @Controller('common/country')

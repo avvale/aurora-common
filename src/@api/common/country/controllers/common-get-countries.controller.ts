@@ -4,7 +4,7 @@ import { Constraint, AddI18NConstraintService, ContentLanguage, IQueryBus, Query
 import { CountryDto } from './../dto/country.dto';
 
 // @apps
-import { GetCountriesQuery } from '@apps/common/country/application/get/get-countries.query';
+import { GetCountriesQuery } from '../../../../@apps/common/country/application/get/get-countries.query';
 
 @ApiTags('[common] country')
 @Controller('common/countries')

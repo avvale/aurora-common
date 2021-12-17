@@ -4,7 +4,7 @@ import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core'
 import { LangDto } from './../dto/lang.dto';
 
 // @apps
-import { FindLangByIdQuery } from '@apps/common/lang/application/find/find-lang-by-id.query';
+import { FindLangByIdQuery } from '../../../../@apps/common/lang/application/find/find-lang-by-id.query';
 
 @ApiTags('[common] lang')
 @Controller('common/lang')
