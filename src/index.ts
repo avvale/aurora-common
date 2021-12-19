@@ -1,4 +1,4 @@
-export * from './@api/common/common.module';
+export { CommonModule } from './@api/common/common.module';
 export { CommonLang } from './@apps/common/lang/domain/lang.aggregate';
 export { CommonLangModel } from './@apps/common/lang';
 export { LangResponse } from './@apps/common/lang/domain/lang.response';
