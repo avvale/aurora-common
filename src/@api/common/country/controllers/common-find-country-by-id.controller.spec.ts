@@ -8,7 +8,7 @@ import { AddI18NConstraintService, ICommandBus, IQueryBus } from 'aurora-ts-core
 import { CommonFindCountryByIdController } from './common-find-country-by-id.controller';
 
 // sources
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 import { countries } from '../../../../@apps/common/country/infrastructure/seeds/country.seed';
 
 describe('CommonFindCountryByIdController', () =>

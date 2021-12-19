@@ -3,10 +3,10 @@
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { ILangRepository } from '../../../../../@apps/common/lang/domain/lang.repository';
-import { MockLangSeeder } from '../../../../../@apps/common/lang/infrastructure/mock/mock-lang.seeder';
-import { GraphQLConfigModule } from '@aurora/graphql/graphql-config.module';
-import { CommonModule } from '@api/common/common.module';
+import { ILangRepository } from '../../../src/@apps/common/lang/domain/lang.repository';
+import { MockLangSeeder } from '../../../src/@apps/common/lang/infrastructure/mock/mock-lang.seeder';
+import { GraphQLConfigModule } from '../../../src/@aurora/graphql/graphql-config.module';
+import { CommonModule } from '../../../src/@api/common/common.module';
 import * as request from 'supertest';
 import * as _ from 'lodash';
 
@@ -57,15 +57,15 @@ describe('lang', () =>
             .set('Accept', 'application/json')
             .send({
                 id: null,
-                name: 'Licensed Steel Tuna',
-                image: 'http://placeimg.com/640/480/cats',
-                iso6392: 'm9',
-                iso6393: '2pu',
-                ietf: 'mk1ev',
-                customCode: 'g59ovw8fuz',
-                dir: 'LTR',
-                sort: 535635,
-                isActive: true,
+                name: 'Licensed Concrete Chicken',
+                image: 'http://placeimg.com/640/480/fashion',
+                iso6392: 'lv',
+                iso6393: 'ttc',
+                ietf: '0jcv3',
+                customCode: '2gioau0kf5',
+                dir: 'RTL',
+                sort: 996974,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -79,16 +79,16 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '240e3a98-fbfb-4ce5-a4ab-f56c77f9bc76',
+                id: '1d849949-8bb8-48c3-9353-ce9d964bb1b0',
                 name: null,
-                image: 'http://placeimg.com/640/480/food',
-                iso6392: 'cy',
-                iso6393: 'tgi',
-                ietf: 'eqvqf',
-                customCode: 'vo4c90310q',
+                image: 'http://placeimg.com/640/480/technics',
+                iso6392: 'fi',
+                iso6393: 'bey',
+                ietf: 'hgj1t',
+                customCode: '1avungsbba',
                 dir: 'LTR',
-                sort: 335200,
-                isActive: true,
+                sort: 700316,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -102,15 +102,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '8e54789c-5552-42ae-b78f-110a3d520858',
-                name: 'Awesome Granite Keyboard',
-                image: 'http://placeimg.com/640/480/nature',
+                id: 'd21c277d-3142-47bf-b474-6f377a1e8768',
+                name: 'Handmade Steel Tuna',
+                image: 'http://placeimg.com/640/480/people',
                 iso6392: null,
-                iso6393: '7nr',
-                ietf: 'cni4r',
-                customCode: 'vru1jhx823',
+                iso6393: '1zw',
+                ietf: '74ykn',
+                customCode: 'v9tv8ev0tr',
                 dir: 'LTR',
-                sort: 290629,
+                sort: 310335,
                 isActive: false,
             })
             .expect(400)
@@ -125,15 +125,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'e6ac2727-924c-4769-a547-8c6a21416a90',
-                name: 'Tasty Frozen Gloves',
-                image: 'http://placeimg.com/640/480/fashion',
-                iso6392: 'z5',
+                id: 'bbbf4167-bc8c-492d-9321-338f79c366d2',
+                name: 'Handcrafted Soft Soap',
+                image: 'http://placeimg.com/640/480/nature',
+                iso6392: '6h',
                 iso6393: null,
-                ietf: 'k4n71',
-                customCode: 'vjscboa4rc',
-                dir: 'RTL',
-                sort: 531509,
+                ietf: 'xtarg',
+                customCode: 'bdfbvx15f9',
+                dir: 'LTR',
+                sort: 453725,
                 isActive: true,
             })
             .expect(400)
@@ -148,15 +148,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '775bf449-76b2-4ae9-97b0-7f9853075038',
-                name: 'Handcrafted Fresh Bacon',
-                image: 'http://placeimg.com/640/480/sports',
-                iso6392: '9w',
-                iso6393: 'osh',
+                id: '4dd90dbb-1a50-431a-a158-26d5c8c02099',
+                name: 'Sleek Rubber Tuna',
+                image: 'http://placeimg.com/640/480/nature',
+                iso6392: 'll',
+                iso6393: 'td3',
                 ietf: null,
-                customCode: 'rkty80yqx5',
-                dir: 'LTR',
-                sort: 542944,
+                customCode: 'j34iqyk8wc',
+                dir: 'RTL',
+                sort: 685958,
                 isActive: true,
             })
             .expect(400)
@@ -171,15 +171,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '56a0c73e-4a0f-4977-9659-cb219416348f',
-                name: 'Unbranded Concrete Fish',
-                image: 'http://placeimg.com/640/480/nightlife',
-                iso6392: '9k',
-                iso6393: 'glh',
-                ietf: 'bcevg',
-                customCode: '6c7zrft8yn',
+                id: '71aa66be-cae5-401c-9068-5042f0aaa7f1',
+                name: 'Unbranded Plastic Chicken',
+                image: 'http://placeimg.com/640/480/city',
+                iso6392: '2v',
+                iso6393: 'bvj',
+                ietf: '2hja1',
+                customCode: '8tgy1r2w1f',
                 dir: null,
-                sort: 129553,
+                sort: 431188,
                 isActive: false,
             })
             .expect(400)
@@ -194,15 +194,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '4c193986-0c60-4f9f-aea9-0a91c5a4f9bc',
-                name: 'Rustic Frozen Hat',
-                image: 'http://placeimg.com/640/480/food',
-                iso6392: '9s',
-                iso6393: 'gb2',
-                ietf: '41xb0',
-                customCode: 'okslipjfuv',
+                id: '95350521-2b83-437a-bdd4-717e047358c3',
+                name: 'Practical Cotton Soap',
+                image: 'http://placeimg.com/640/480/fashion',
+                iso6392: '4g',
+                iso6393: '2gz',
+                ietf: 'e94iz',
+                customCode: '1onu7sxkch',
                 dir: 'LTR',
-                sort: 316424,
+                sort: 279951,
                 isActive: null,
             })
             .expect(400)
@@ -217,15 +217,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                name: 'Awesome Concrete Salad',
-                image: 'http://placeimg.com/640/480/sports',
-                iso6392: 'db',
-                iso6393: '6sq',
-                ietf: 'rn1hj',
-                customCode: '6fluowbrid',
+                name: 'Practical Wooden Chips',
+                image: 'http://placeimg.com/640/480/cats',
+                iso6392: '59',
+                iso6393: 'jqf',
+                ietf: 'aye9h',
+                customCode: '6s4pw3n4u6',
                 dir: 'LTR',
-                sort: 299082,
-                isActive: true,
+                sort: 752611,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -239,14 +239,14 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '3fda444d-0f57-421b-b595-ffcf3fa0e118',
-                image: 'http://placeimg.com/640/480/fashion',
-                iso6392: '21',
-                iso6393: '5y9',
-                ietf: 'zfts9',
-                customCode: 'qbd9koixh9',
+                id: '3792f4bf-595e-4ace-9ec4-cc4b520e11ad',
+                image: 'http://placeimg.com/640/480/sports',
+                iso6392: 'sy',
+                iso6393: '9ol',
+                ietf: '0b9ya',
+                customCode: 'avfltpdmwp',
                 dir: 'RTL',
-                sort: 362960,
+                sort: 525153,
                 isActive: true,
             })
             .expect(400)
@@ -261,14 +261,14 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'b5e385f6-6804-44e0-95c2-473c660f6c74',
-                name: 'Generic Concrete Sausages',
-                image: 'http://placeimg.com/640/480/animals',
-                iso6393: 'jjb',
-                ietf: 'pmemo',
-                customCode: '4gyjwojol3',
+                id: 'bb457f39-ca6e-4e42-88f6-1b2f6abfd573',
+                name: 'Gorgeous Concrete Sausages',
+                image: 'http://placeimg.com/640/480/nature',
+                iso6393: 'kah',
+                ietf: '3g2m9',
+                customCode: '8crohwzl5x',
                 dir: 'RTL',
-                sort: 260841,
+                sort: 935380,
                 isActive: false,
             })
             .expect(400)
@@ -283,15 +283,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '226e33af-4141-4392-b057-931c31f4de12',
-                name: 'Sleek Wooden Towels',
-                image: 'http://placeimg.com/640/480/people',
-                iso6392: 'mp',
-                ietf: 'no6ta',
-                customCode: '6a718065w7',
-                dir: 'RTL',
-                sort: 282269,
-                isActive: true,
+                id: '57b9c442-5350-4b4c-8cd2-98c3988f84b3',
+                name: 'Licensed Soft Sausages',
+                image: 'http://placeimg.com/640/480/nightlife',
+                iso6392: '8d',
+                ietf: 'cor65',
+                customCode: 'oq68w7oimz',
+                dir: 'LTR',
+                sort: 309721,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -305,14 +305,14 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'b386b509-8844-4bb6-b2dd-6dc223ab65fe',
-                name: 'Small Wooden Keyboard',
-                image: 'http://placeimg.com/640/480/business',
-                iso6392: '0p',
-                iso6393: '67l',
-                customCode: '91maxqkd3o',
+                id: 'd495ed02-bdb1-4984-a3fe-c0009715e4ba',
+                name: 'Intelligent Frozen Fish',
+                image: 'http://placeimg.com/640/480/nature',
+                iso6392: 'sw',
+                iso6393: 'e8k',
+                customCode: '4iq1feevwq',
                 dir: 'LTR',
-                sort: 305977,
+                sort: 304628,
                 isActive: false,
             })
             .expect(400)
@@ -327,14 +327,14 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '2002cd8b-bd6e-403f-b050-fc3b3059ac95',
-                name: 'Unbranded Concrete Chair',
-                image: 'http://placeimg.com/640/480/cats',
-                iso6392: 'l9',
-                iso6393: 'qic',
-                ietf: 'p6mi6',
-                customCode: 'rreesl35mw',
-                sort: 154182,
+                id: '9ef1f454-ba25-4ced-a95b-aef64b26edf1',
+                name: 'Practical Steel Cheese',
+                image: 'http://placeimg.com/640/480/abstract',
+                iso6392: 'zu',
+                iso6393: 'ai4',
+                ietf: 'tg640',
+                customCode: '5shzjikmii',
+                sort: 571486,
                 isActive: false,
             })
             .expect(400)
@@ -349,15 +349,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '1cd06f3e-1be3-41cc-adc8-bb040e5eb7a3',
-                name: 'Unbranded Concrete Tuna',
-                image: 'http://placeimg.com/640/480/transport',
-                iso6392: 're',
-                iso6393: 'ef7',
-                ietf: 'jrdgo',
-                customCode: '8avz829fkx',
+                id: '132d4a4d-48d7-4921-9af0-3ef5f9f466ad',
+                name: 'Practical Plastic Sausages',
+                image: 'http://placeimg.com/640/480/fashion',
+                iso6392: '2k',
+                iso6393: '515',
+                ietf: '280e5',
+                customCode: 'd4x6lct6j0',
                 dir: 'LTR',
-                sort: 682829,
+                sort: 582749,
             })
             .expect(400)
             .then(res => {
@@ -371,15 +371,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'c77iffarjnh96e6foruuc4w63r62cquo3yv9w',
-                name: 'Intelligent Plastic Shirt',
-                image: 'http://placeimg.com/640/480/nightlife',
-                iso6392: 'ly',
-                iso6393: '02s',
-                ietf: 'hfb4m',
-                customCode: 'vbtp0gdxpc',
+                id: 'eckcgu3j9b2tec9j3jfx5qbxg1xrsaz0i7qas',
+                name: 'Fantastic Cotton Chair',
+                image: 'http://placeimg.com/640/480/abstract',
+                iso6392: 'iu',
+                iso6393: 'di0',
+                ietf: 'npkew',
+                customCode: 'luxwmzns30',
                 dir: 'LTR',
-                sort: 244278,
+                sort: 642651,
                 isActive: false,
             })
             .expect(400)
@@ -394,16 +394,16 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'd6f27415-b561-4331-97c3-7ba2905d69d5',
-                name: 'Ergonomic Soft Mouse',
-                image: 'http://placeimg.com/640/480/cats',
-                iso6392: 'tsr',
-                iso6393: 'mlq',
-                ietf: 'f8fdm',
-                customCode: 'pfguluf5jc',
-                dir: 'RTL',
-                sort: 699758,
-                isActive: true,
+                id: 'bca50005-0c45-47da-97fc-5931ae569d85',
+                name: 'Generic Plastic Pants',
+                image: 'http://placeimg.com/640/480/animals',
+                iso6392: 'zqp',
+                iso6393: '1pl',
+                ietf: 'o0mxw',
+                customCode: '8gyuevu4nv',
+                dir: 'LTR',
+                sort: 753989,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -417,15 +417,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '0a448777-8a07-4908-82df-a5fdfb3aeba3',
-                name: 'Gorgeous Rubber Salad',
-                image: 'http://placeimg.com/640/480/transport',
-                iso6392: 'wn',
-                iso6393: '9wke',
-                ietf: '93owk',
-                customCode: 'm2mspmsngh',
+                id: 'd3331d30-78e2-44f7-a4bd-09743f4d9056',
+                name: 'Small Plastic Salad',
+                image: 'http://placeimg.com/640/480/city',
+                iso6392: '3z',
+                iso6393: 'z1yh',
+                ietf: '46dwo',
+                customCode: '6p3xek9ym2',
                 dir: 'RTL',
-                sort: 532885,
+                sort: 156509,
                 isActive: false,
             })
             .expect(400)
@@ -440,16 +440,16 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '8738d23b-407b-4e0f-87ca-9de2c9092584',
-                name: 'Fantastic Cotton Pants',
-                image: 'http://placeimg.com/640/480/cats',
-                iso6392: 'f5',
-                iso6393: '0yy',
-                ietf: 'hi68cp',
-                customCode: 's2qmtfab21',
+                id: '10269576-3383-49a2-bb06-df1d702a3cf2',
+                name: 'Sleek Metal Chair',
+                image: 'http://placeimg.com/640/480/business',
+                iso6392: 'qz',
+                iso6393: '8v6',
+                ietf: 'epa9a8',
+                customCode: 'kishl1wzeb',
                 dir: 'RTL',
-                sort: 137533,
-                isActive: true,
+                sort: 625666,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -463,15 +463,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: 'e0c3bc0d-6881-4450-8b45-8bd6ddc0a24d',
-                name: 'Licensed Cotton Shoes',
-                image: 'http://placeimg.com/640/480/sports',
-                iso6392: 'gx',
-                iso6393: 'p2e',
-                ietf: 'vplt6',
-                customCode: 'y253apl8puo',
-                dir: 'LTR',
-                sort: 708707,
+                id: 'e57e0e9b-3e62-4b43-b09f-6baccbbfa248',
+                name: 'Sleek Steel Shoes',
+                image: 'http://placeimg.com/640/480/abstract',
+                iso6392: 'dl',
+                iso6393: 'hk9',
+                ietf: 'n4odm',
+                customCode: 'qxt18d1ciz2',
+                dir: 'RTL',
+                sort: 744390,
                 isActive: false,
             })
             .expect(400)
@@ -486,15 +486,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '27dcef9c-ea5c-438a-853b-61c5b6aca75b',
-                name: 'Tasty Soft Ball',
-                image: 'http://placeimg.com/640/480/nature',
-                iso6392: 'sh',
-                iso6393: 'weg',
-                ietf: 'oefzs',
-                customCode: 'yq6189vb1l',
-                dir: 'LTR',
-                sort: 9975907,
+                id: 'dc157360-7c1f-48da-8b0b-215eb63559e5',
+                name: 'Awesome Cotton Pants',
+                image: 'http://placeimg.com/640/480/people',
+                iso6392: 'js',
+                iso6393: 'j6u',
+                ietf: '6pvci',
+                customCode: 'j4q4we7tky',
+                dir: 'RTL',
+                sort: 2348817,
                 isActive: false,
             })
             .expect(400)
@@ -509,15 +509,15 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '60d476fb-940d-41c9-a46c-203c90778b6c',
-                name: 'Rustic Soft Keyboard',
-                image: 'http://placeimg.com/640/480/people',
-                iso6392: 'ez',
-                iso6393: 'jui',
-                ietf: 'o32vg',
-                customCode: 'j5pakfwiqf',
+                id: 'a158f0c6-687b-412d-916d-407e744e502b',
+                name: 'Ergonomic Metal Towels',
+                image: 'http://placeimg.com/640/480/transport',
+                iso6392: 'bh',
+                iso6393: 'k1k',
+                ietf: '6pp3r',
+                customCode: 'fzrl0s9fnk',
                 dir: 'LTR',
-                sort: 659910,
+                sort: 783064,
                 isActive: 'true',
             })
             .expect(400)
@@ -531,16 +531,16 @@ describe('lang', () =>
             .post('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '8099ba3e-0cf1-4d8a-bd43-756eb5370068',
-                name: 'Sleek Wooden Salad',
-                image: 'http://placeimg.com/640/480/fashion',
-                iso6392: 'vq',
-                iso6393: 'd2i',
-                ietf: 'yawap',
-                customCode: '9sopai6tso',
+                id: 'f546f0ba-a5ab-433f-ad23-8a8dea5b4a71',
+                name: 'Tasty Metal Pizza',
+                image: 'http://placeimg.com/640/480/business',
+                iso6392: 've',
+                iso6393: '3ps',
+                ietf: 'm0e90',
+                customCode: '5e7j9547be',
                 dir: 'XXXX',
-                sort: 587655,
-                isActive: true,
+                sort: 571902,
+                isActive: false,
             })
             .expect(400)
             .then(res => {
@@ -602,7 +602,7 @@ describe('lang', () =>
                 {
                     where:
                     {
-                        id: '5dd0c35c-fb5e-406c-9a80-91e47a8f5e27'
+                        id: '3f3a3ed1-85fc-4058-9d22-c13b7774feaf'
                     }
                 }
             })
@@ -616,15 +616,15 @@ describe('lang', () =>
             .set('Accept', 'application/json')
             .send({
                 id: '5b19d6ac-4081-573b-96b3-56964d5326a8',
-                name: 'Gorgeous Wooden Soap',
-                image: 'http://placeimg.com/640/480/technics',
-                iso6392: '05',
-                iso6393: 'up2',
-                ietf: 'nsfs8',
-                customCode: '69xaflggi7',
-                dir: 'LTR',
-                sort: 930771,
-                isActive: false,
+                name: 'Fantastic Plastic Sausages',
+                image: 'http://placeimg.com/640/480/sports',
+                iso6392: 'r8',
+                iso6393: 'alg',
+                ietf: 'epzso',
+                customCode: 'th7snmw6je',
+                dir: 'RTL',
+                sort: 581579,
+                isActive: true,
             })
             .expect(201);
     });
@@ -652,7 +652,7 @@ describe('lang', () =>
     test('/REST:GET common/lang/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/lang/70a3f462-53a0-4e59-8714-13de5c279b97')
+            .get('/common/lang/54b35fff-8398-49e4-b226-533d6276eba8')
             .set('Accept', 'application/json')
             .expect(404);
     });
@@ -674,15 +674,15 @@ describe('lang', () =>
             .put('/common/lang')
             .set('Accept', 'application/json')
             .send({
-                id: '3c181042-b190-4ad4-b02a-9fa0af449dfb',
-                name: 'Gorgeous Granite Fish',
-                image: 'http://placeimg.com/640/480/animals',
-                iso6392: 'd7',
-                iso6393: 'fwm',
-                ietf: 's2qyr',
-                customCode: 'fl4oyrllxt',
-                dir: 'LTR',
-                sort: 419896,
+                id: '47ede32c-d6cd-4564-ad86-8030d05ad631',
+                name: 'Licensed Soft Computer',
+                image: 'http://placeimg.com/640/480/nature',
+                iso6392: 'k3',
+                iso6393: 'tpi',
+                ietf: 'wtcl6',
+                customCode: 'mhvgcib77e',
+                dir: 'RTL',
+                sort: 604410,
                 isActive: false,
             })
             .expect(404);
@@ -695,14 +695,14 @@ describe('lang', () =>
             .set('Accept', 'application/json')
             .send({
                 id: '5b19d6ac-4081-573b-96b3-56964d5326a8',
-                name: 'Incredible Soft Gloves',
-                image: 'http://placeimg.com/640/480/nightlife',
-                iso6392: 'vd',
-                iso6393: 'jy3',
-                ietf: 'dpd3b',
-                customCode: '07ho6fgk8v',
-                dir: 'RTL',
-                sort: 162937,
+                name: 'Handcrafted Cotton Tuna',
+                image: 'http://placeimg.com/640/480/people',
+                iso6392: '5j',
+                iso6393: 'yep',
+                ietf: '2cb83',
+                customCode: '86dleo0v43',
+                dir: 'LTR',
+                sort: 146912,
                 isActive: true,
             })
             .expect(200)
@@ -714,7 +714,7 @@ describe('lang', () =>
     test('/REST:DELETE common/lang/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .delete('/common/lang/1f9ae584-4776-454e-9bb8-dfdd4b03059d')
+            .delete('/common/lang/88a1b4ac-81fd-4e5f-9381-b2d66b5d15ca')
             .set('Accept', 'application/json')
             .expect(404);
     });
@@ -864,15 +864,15 @@ describe('lang', () =>
                 variables: {
                     payload: {
                         id: '5b19d6ac-4081-573b-96b3-56964d5326a8',
-                        name: 'Small Fresh Sausages',
-                        image: 'http://placeimg.com/640/480/business',
-                        iso6392: 'bg',
-                        iso6393: 'tlj',
-                        ietf: 't3gxn',
-                        customCode: 'yfccqj2nf7',
+                        name: 'Refined Soft Pants',
+                        image: 'http://placeimg.com/640/480/nature',
+                        iso6392: 'l8',
+                        iso6393: '41w',
+                        ietf: 'bvud8',
+                        customCode: 'zme0azvikr',
                         dir: 'RTL',
-                        sort: 154113,
-                        isActive: false,
+                        sort: 961774,
+                        isActive: true,
                     }
                 }
             })
@@ -914,7 +914,7 @@ describe('lang', () =>
                     {
                         where:
                         {
-                            id: '19bed9ad-cd21-433c-b81a-a715efbd7a44'
+                            id: '1c7bdf13-a105-4ac3-96a3-749abfa9447e'
                         }
                     }
                 }
@@ -997,7 +997,7 @@ describe('lang', () =>
                     }
                 `,
                 variables: {
-                    id: 'd2bca24a-79dc-485a-935d-28f58c8ba54a'
+                    id: '60e7d61a-ba57-41ee-92e1-bf8dd695f6ee'
                 }
             })
             .expect(200)
@@ -1072,16 +1072,16 @@ describe('lang', () =>
                 `,
                 variables: {
                     payload: {
-                        id: 'e7bed69e-1812-46b3-9c6f-61eae21da262',
-                        name: 'Refined Fresh Towels',
-                        image: 'http://placeimg.com/640/480/abstract',
-                        iso6392: 'kz',
-                        iso6393: '69e',
-                        ietf: 'c4u4r',
-                        customCode: '4g9onexspo',
+                        id: '14b3e86c-0c9d-4eec-a71f-c76ea533d82a',
+                        name: 'Licensed Soft Hat',
+                        image: 'http://placeimg.com/640/480/business',
+                        iso6392: '8q',
+                        iso6393: 'uk6',
+                        ietf: 'd2h6e',
+                        customCode: 'thaeznr3s9',
                         dir: 'LTR',
-                        sort: 651189,
-                        isActive: true,
+                        sort: 897914,
+                        isActive: false,
                     }
                 }
             })
@@ -1122,15 +1122,15 @@ describe('lang', () =>
                 variables: {
                     payload: {
                         id: '5b19d6ac-4081-573b-96b3-56964d5326a8',
-                        name: 'Awesome Fresh Shoes',
-                        image: 'http://placeimg.com/640/480/business',
-                        iso6392: 'j6',
-                        iso6393: 'aka',
-                        ietf: 'ypl0g',
-                        customCode: '09zzkop2jb',
-                        dir: 'RTL',
-                        sort: 704557,
-                        isActive: false,
+                        name: 'Unbranded Wooden Keyboard',
+                        image: 'http://placeimg.com/640/480/fashion',
+                        iso6392: 'c5',
+                        iso6393: 'gr9',
+                        ietf: 's2w3o',
+                        customCode: '8n67wjlq9l',
+                        dir: 'LTR',
+                        sort: 772355,
+                        isActive: true,
                     }
                 }
             })
@@ -1167,7 +1167,7 @@ describe('lang', () =>
                     }
                 `,
                 variables: {
-                    id: '54104c2a-17dc-44b5-bfee-6b14768cd0a9'
+                    id: '1c74501f-2f57-4ce5-bebd-44b93ca59708'
                 }
             })
             .expect(200)

@@ -9,7 +9,7 @@ import { CommonUpdateCountryResolver } from './common-update-country.resolver';
 import { CommonUpdateCountryInput } from './../../../../graphql';
 
 // sources
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 import { countries } from '../../../../@apps/common/country/infrastructure/seeds/country.seed';
 
 describe('CommonUpdateCountryResolver', () =>

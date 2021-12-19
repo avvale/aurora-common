@@ -8,7 +8,7 @@ import { AddI18NConstraintService, ICommandBus, IQueryBus } from 'aurora-ts-core
 import { CommonCreateCountryController } from './common-create-country.controller';
 
 // sources
-import { langs } from '@apps/common/lang/infrastructure/seeds/lang.seed';
+import { langs } from '../../../../@apps/common/lang/infrastructure/seeds/lang.seed';
 import { countries } from '../../../../@apps/common/country/infrastructure/seeds/country.seed';
 
 describe('CommonCreateCountryController', () =>
