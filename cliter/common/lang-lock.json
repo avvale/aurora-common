@@ -263,7 +263,7 @@
         },
         {
             "path": "src/@apps/common/lang/infrastructure/seeds/lang.seed.ts",
-            "integrity": "sha1:0a69b1044794843a3c3b7bb729f1f40ffab5a56a"
+            "integrity": "sha1:b4344a9b0d19be9b264867d4b04783d9fcff74e0"
         },
         {
             "path": "src/@apps/common/lang/infrastructure/sequelize/sequelize-lang.model.ts",
@@ -499,7 +499,7 @@
         },
         {
             "path": "postman/common.lang.postman.json",
-            "integrity": "sha1:e8b2b7fe1dd03f050b5b299d2d8658441338d0c8"
+            "integrity": "sha1:835b8002a4db12c75fefb048aa0ac9170d1c8220"
         }
     ]
 }

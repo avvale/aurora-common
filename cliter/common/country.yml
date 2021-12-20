@@ -103,6 +103,7 @@ aggregateProperties:
     relationshipModulePath: common/lang
     relationshipKey: id
     relationshipField: lang
+    relationshipAvoidConstraint: true
     index: unique
     indexName: uniqueLangId
     isI18n: true

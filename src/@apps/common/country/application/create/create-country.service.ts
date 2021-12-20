@@ -108,7 +108,7 @@ export class CreateCountryService
         await this.repositoryI18n.create(country, (aggregate: CommonCountry ) => aggregate.toI18nDTO(), (aggregate: CommonCountry ) => ({
             where: {
                 countryId: aggregate['id']['value'],
-                langId   : aggregate['langId']['value'],
+                langId: aggregate['langId']['value'],
             }
         }));
 
