@@ -40,6 +40,6 @@ export class CommonModule
     async onApplicationBootstrap(): Promise<void>
     {
         // set lang in cache manager
-        await this.cacheManager.set('common/lang', await this.queryBus.ask(new GetLangsQuery()));
+        await this.cacheManager.set('common/lang', await this.queryBus.ask(new GetLangsQuery()), { ttl: 0 });
     }
 }
