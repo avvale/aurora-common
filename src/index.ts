@@ -14,3 +14,8 @@ export { CommonAdministrativeAreaLevel1Model } from './@apps/common/administrati
 export { AdministrativeAreaLevel1Response } from './@apps/common/administrative-area-level-1/domain/administrative-area-level-1.response';
 export { AdministrativeAreaLevel1Mapper } from './@apps/common/administrative-area-level-1/domain/administrative-area-level-1.mapper';
 export { administrativeAreasLevel1 } from './@apps/common/administrative-area-level-1/infrastructure/seeds/administrative-area-level-1.seed';
+export { CommonAdministrativeAreaLevel2 } from './@apps/common/administrative-area-level-2/domain/administrative-area-level-2.aggregate';
+export { CommonAdministrativeAreaLevel2Model } from './@apps/common/administrative-area-level-2';
+export { AdministrativeAreaLevel2Response } from './@apps/common/administrative-area-level-2/domain/administrative-area-level-2.response';
+export { AdministrativeAreaLevel2Mapper } from './@apps/common/administrative-area-level-2/domain/administrative-area-level-2.mapper';
+export { administrativeAreasLevel2 } from './@apps/common/administrative-area-level-2/infrastructure/seeds/administrative-area-level-2.seed';
