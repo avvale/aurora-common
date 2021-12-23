@@ -1,0 +1,553 @@
+{
+    "info": {
+		"_postman_id"   : "c73b1305-2ce7-47b4-8b2d-bed208c714b1",
+		"name"          : "@apps - common/administrative-area-level-1",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - commonCreateAdministrativeAreaLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonCreateAdministrativeAreaLevel1Input!)\n{\n\tcommonCreateAdministrativeAreaLevel1 (payload:$payload)\n\t{\n\t\tid\n\t\tcountryId\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"dph9dobc\", \n\t\t\"customCode\": \"mnapajaip0\", \n\t\t\"name\": \"Unbranded Wooden Shoes\", \n\t\t\"slug\": \"harum-labore-dolores\", \n\t\t\"latitude\": 32348130363554896, \n\t\t\"longitude\": 58481661989094770, \n\t\t\"zoom\": 61\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonCreateAdministrativeAreasLevel1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[CommonCreateAdministrativeAreaLevel1Input]!)\n{\n\tcommonCreateAdministrativeAreasLevel1 (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"f3ef78cb-e9d8-4262-90c3-4bcf90df1989\", \n\t\t\t\"countryId\": \"f61b58ec-9d96-446b-b0dc-9e58e82e8302\", \n\t\t\t\"code\": \"hh15iufx\", \n\t\t\t\"customCode\": \"bdrupih1w6\", \n\t\t\t\"name\": \"Awesome Rubber Computer\", \n\t\t\t\"slug\": \"est-reprehenderit-et\", \n\t\t\t\"latitude\": 10257396618916634, \n\t\t\t\"longitude\": 49784550612675830, \n\t\t\t\"zoom\": 20\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"45d49ae6-06bb-4089-a888-e7361572c7e0\", \n\t\t\t\"countryId\": \"f360aeca-0dea-4f66-bc6c-b060134e4827\", \n\t\t\t\"code\": \"ere9ym53\", \n\t\t\t\"customCode\": \"5jsm75glol\", \n\t\t\t\"name\": \"Gorgeous Wooden Chair\", \n\t\t\t\"slug\": \"quo-dolores-aut\", \n\t\t\t\"latitude\": 75926936249690660, \n\t\t\t\"longitude\": 77635037391108100, \n\t\t\t\"zoom\": 32\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"73d7660e-cdf0-4539-bb38-f2f504004e7a\", \n\t\t\t\"countryId\": \"ca485c23-ecd3-41b7-bf32-12f7dc91e650\", \n\t\t\t\"code\": \"vwg2knrw\", \n\t\t\t\"customCode\": \"bhx42dxdyc\", \n\t\t\t\"name\": \"Unbranded Steel Shirt\", \n\t\t\t\"slug\": \"dolorum-ullam-vel\", \n\t\t\t\"latitude\": 93753687023228370, \n\t\t\t\"longitude\": 70792406897015660, \n\t\t\t\"zoom\": 82\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b6371c59-1569-4c19-87fb-1356c6565e25\", \n\t\t\t\"countryId\": \"bda449ca-f17c-4fb5-84fa-ab18883a75a9\", \n\t\t\t\"code\": \"w15k08dj\", \n\t\t\t\"customCode\": \"r8o5owa60u\", \n\t\t\t\"name\": \"Handmade Granite Shoes\", \n\t\t\t\"slug\": \"libero-omnis-aperiam\", \n\t\t\t\"latitude\": 44429328529460530, \n\t\t\t\"longitude\": 74402178413557090, \n\t\t\t\"zoom\": 32\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"3e698c2e-82a9-4ead-a66d-2536c6d2d46b\", \n\t\t\t\"countryId\": \"cd59a9db-db68-45e5-8514-db5fdce0e403\", \n\t\t\t\"code\": \"omtxi5x9\", \n\t\t\t\"customCode\": \"ppag849hg0\", \n\t\t\t\"name\": \"Generic Granite Cheese\", \n\t\t\t\"slug\": \"voluptas-autem-omnis\", \n\t\t\t\"latitude\": 57402781233783300, \n\t\t\t\"longitude\": 99179192910175140, \n\t\t\t\"zoom\": 90\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"433db075-0442-465a-86bd-07f1748d870a\", \n\t\t\t\"countryId\": \"1e2cd2f4-2e84-436c-95d3-6ba10f4cd018\", \n\t\t\t\"code\": \"w3z5ostj\", \n\t\t\t\"customCode\": \"nogc78rmnf\", \n\t\t\t\"name\": \"Refined Metal Towels\", \n\t\t\t\"slug\": \"porro-qui-commodi\", \n\t\t\t\"latitude\": 88058491667753010, \n\t\t\t\"longitude\": 17683457622726306, \n\t\t\t\"zoom\": 49\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"04ea1eac-93c7-4936-8660-f8cd2fc1691b\", \n\t\t\t\"countryId\": \"7025c399-6447-4fb3-bf05-1db5fbba44ad\", \n\t\t\t\"code\": \"q3mrbia6\", \n\t\t\t\"customCode\": \"7obs6lp575\", \n\t\t\t\"name\": \"Refined Rubber Chicken\", \n\t\t\t\"slug\": \"sunt-voluptas-ut\", \n\t\t\t\"latitude\": 36245964316235736, \n\t\t\t\"longitude\": 74553803130468060, \n\t\t\t\"zoom\": 61\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b3ce4543-b266-450a-b28d-28a92dc7d7ad\", \n\t\t\t\"countryId\": \"61e893fc-72cb-4073-b076-13f705ff8c69\", \n\t\t\t\"code\": \"7yujnvrl\", \n\t\t\t\"customCode\": \"lpu7z77sar\", \n\t\t\t\"name\": \"Generic Plastic Pants\", \n\t\t\t\"slug\": \"culpa-cumque-quisquam\", \n\t\t\t\"latitude\": 26274239170528024, \n\t\t\t\"longitude\": 29923636612343844, \n\t\t\t\"zoom\": 44\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"fb60d97d-0eb9-4243-ba0b-bb58bead925d\", \n\t\t\t\"countryId\": \"1d72b86f-1e65-4c99-b542-80e19832eaff\", \n\t\t\t\"code\": \"1cvj49gh\", \n\t\t\t\"customCode\": \"lcn0d6mn68\", \n\t\t\t\"name\": \"Gorgeous Frozen Bacon\", \n\t\t\t\"slug\": \"autem-voluptatibus-blanditiis\", \n\t\t\t\"latitude\": 41277335907014250, \n\t\t\t\"longitude\": 24012247468916970, \n\t\t\t\"zoom\": 56\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"9a52e2ef-a89b-41f1-86ef-c1fde794a497\", \n\t\t\t\"countryId\": \"a3263868-42b9-4feb-afdc-1bebca3b073b\", \n\t\t\t\"code\": \"fndvp0uv\", \n\t\t\t\"customCode\": \"qi1is1wjdf\", \n\t\t\t\"name\": \"Sleek Metal Soap\", \n\t\t\t\"slug\": \"ea-et-sit\", \n\t\t\t\"latitude\": 33514066839085056, \n\t\t\t\"longitude\": 38878438745201020, \n\t\t\t\"zoom\": 28\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonPaginateAdministrativeAreasLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\tcommonPaginateAdministrativeAreasLevel1 (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonGetAdministrativeAreasLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonGetAdministrativeAreasLevel1 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindAdministrativeAreaLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\tcommonFindAdministrativeAreaLevel1 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonFindAdministrativeAreaLevel1ById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\tcommonFindAdministrativeAreaLevel1ById (id:$id)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonUpdateAdministrativeAreaLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:CommonUpdateAdministrativeAreaLevel1Input!)\n{\n\tcommonUpdateAdministrativeAreaLevel1 (payload:$payload)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"uf88m956\", \n\t\t\"customCode\": \"exkhpa9537\", \n\t\t\"name\": \"Small Frozen Bacon\", \n\t\t\"slug\": \"rerum-nihil-enim\", \n\t\t\"latitude\": 89223758587081170, \n\t\t\"longitude\": 71702582138468550, \n\t\t\"zoom\": 70\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteAdministrativeAreaLevel1ById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\tcommonDeleteAdministrativeAreaLevel1ById (id:$id)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - commonDeleteAdministrativeAreasLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\tcommonDeleteAdministrativeAreasLevel1 (query: $query)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"sntvdgyd\", \n\t\"customCode\": \"k0jvugmq6s\", \n\t\"name\": \"Small Fresh Pants\", \n\t\"slug\": \"voluptate-laborum-nemo\", \n\t\"latitude\": 12567914909025630, \n\t\"longitude\": 27088531809778350, \n\t\"zoom\": 44\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-1"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"b02108c0-8358-4a9f-a97f-0527be7d682f\", \n\t\t\"countryId\": \"b5678706-eca0-483d-b17d-738394aa8a86\", \n\t\t\"code\": \"4egw4veu\", \n\t\t\"customCode\": \"23ltzlg61q\", \n\t\t\"name\": \"Unbranded Granite Gloves\", \n\t\t\"slug\": \"quis-autem-enim\", \n\t\t\"latitude\": 52850887215163160, \n\t\t\"longitude\": 45398823605585940, \n\t\t\"zoom\": 61\n\t}, \n\t{\n\t\t\"id\": \"133f80c4-f4bc-45f9-b865-d92ffd338d66\", \n\t\t\"countryId\": \"39f1b3da-caa3-41b7-8662-e16974ab34a8\", \n\t\t\"code\": \"3pxqj9s6\", \n\t\t\"customCode\": \"jhlo05hly8\", \n\t\t\"name\": \"Handmade Cotton Chips\", \n\t\t\"slug\": \"ut-similique-accusamus\", \n\t\t\"latitude\": 12122860532954986, \n\t\t\"longitude\": 60761996739914536, \n\t\t\"zoom\": 20\n\t}, \n\t{\n\t\t\"id\": \"b38d7129-a441-4bf9-b336-805a20e1e5c7\", \n\t\t\"countryId\": \"6f519fcd-2db9-4294-b861-6aa87e74b200\", \n\t\t\"code\": \"12ud967s\", \n\t\t\"customCode\": \"o1rw3fhwbx\", \n\t\t\"name\": \"Licensed Fresh Salad\", \n\t\t\"slug\": \"dolor-facilis-sit\", \n\t\t\"latitude\": 82081087079366720, \n\t\t\"longitude\": 86621796350438420, \n\t\t\"zoom\": 45\n\t}, \n\t{\n\t\t\"id\": \"4b3e25a5-553c-41e9-b7a9-1cfb5f761e77\", \n\t\t\"countryId\": \"e72adb76-443e-42b7-a30f-4a0dfbe3e6b1\", \n\t\t\"code\": \"bw80ovu9\", \n\t\t\"customCode\": \"wrjq1q4718\", \n\t\t\"name\": \"Rustic Frozen Tuna\", \n\t\t\"slug\": \"quos-dolores-nemo\", \n\t\t\"latitude\": 77109631427283230, \n\t\t\"longitude\": 33667271616785436, \n\t\t\"zoom\": 48\n\t}, \n\t{\n\t\t\"id\": \"7b688733-c05a-4b06-bc60-c8b4221d52ed\", \n\t\t\"countryId\": \"6e2dae87-dd23-4dad-a74d-d5e7d3341266\", \n\t\t\"code\": \"ijz5n27v\", \n\t\t\"customCode\": \"zp5hbvv9uj\", \n\t\t\"name\": \"Practical Rubber Car\", \n\t\t\"slug\": \"explicabo-et-quia\", \n\t\t\"latitude\": 82337116018441740, \n\t\t\"longitude\": 90012164546693200, \n\t\t\"zoom\": 42\n\t}, \n\t{\n\t\t\"id\": \"47448081-7963-46bd-928c-7449eb87da53\", \n\t\t\"countryId\": \"b88df471-3726-4508-8e27-987e376f2a3d\", \n\t\t\"code\": \"atgvnwp6\", \n\t\t\"customCode\": \"qombbtblod\", \n\t\t\"name\": \"Handmade Plastic Mouse\", \n\t\t\"slug\": \"totam-praesentium-illo\", \n\t\t\"latitude\": 92543956057282370, \n\t\t\"longitude\": 70433056410496000, \n\t\t\"zoom\": 88\n\t}, \n\t{\n\t\t\"id\": \"71be633e-d475-4794-a639-4cec041d087c\", \n\t\t\"countryId\": \"1942927d-0b76-474c-b7c5-681f5042766d\", \n\t\t\"code\": \"99j0ve2p\", \n\t\t\"customCode\": \"miab4f46sz\", \n\t\t\"name\": \"Generic Plastic Shirt\", \n\t\t\"slug\": \"consequatur-neque-non\", \n\t\t\"latitude\": 56631671527443210, \n\t\t\"longitude\": 17418769600146946, \n\t\t\"zoom\": 94\n\t}, \n\t{\n\t\t\"id\": \"544b896a-b36d-40db-83af-5c9b98a3217b\", \n\t\t\"countryId\": \"dc685729-ce16-4bfc-98f3-1b365d57d5e6\", \n\t\t\"code\": \"bne64t6y\", \n\t\t\"customCode\": \"1r41ba03nk\", \n\t\t\"name\": \"Fantastic Wooden Tuna\", \n\t\t\"slug\": \"non-et-est\", \n\t\t\"latitude\": 32167982997537224, \n\t\t\"longitude\": 38654237438005864, \n\t\t\"zoom\": 66\n\t}, \n\t{\n\t\t\"id\": \"e9741e56-6f34-44fe-a653-44e2cd8cbcd4\", \n\t\t\"countryId\": \"00b362c9-3adc-464e-8536-ae858a1d861a\", \n\t\t\"code\": \"vmv87acr\", \n\t\t\"customCode\": \"h6wjd0jxl4\", \n\t\t\"name\": \"Fantastic Soft Tuna\", \n\t\t\"slug\": \"sunt-consequuntur-consequatur\", \n\t\t\"latitude\": 85904084775972380, \n\t\t\"longitude\": 43977099916784000, \n\t\t\"zoom\": 67\n\t}, \n\t{\n\t\t\"id\": \"485c2097-8fc5-4806-8dfb-79da2c179a33\", \n\t\t\"countryId\": \"61742444-ed94-42b6-8636-ba5f5b165972\", \n\t\t\"code\": \"te0c1h32\", \n\t\t\"customCode\": \"p4d0nz5cul\", \n\t\t\"name\": \"Handcrafted Plastic Pants\", \n\t\t\"slug\": \"vel-vero-non\", \n\t\t\"latitude\": 22835087958789444, \n\t\t\"longitude\": 56351179077557720, \n\t\t\"zoom\": 41\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-1"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-1/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-1/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+                        "administrative-areas-level-1",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-areas-level-1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-1"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-1"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-1/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-1/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-1",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"z9irr988\", \n\t\"customCode\": \"7adefubcc9\", \n\t\"name\": \"Sleek Granite Pants\", \n\t\"slug\": \"sequi-harum-aliquid\", \n\t\"latitude\": 71558665174010510, \n\t\"longitude\": 30109302175366110, \n\t\"zoom\": 78\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-1"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - common/administrative-area-level-1/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-area-level-1/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-area-level-1",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - common/administrative-areas-level-1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"common",
+						"administrative-areas-level-1"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "a844d581-a039-47b8-bb7a-5848786e7928",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

@@ -9,3 +9,8 @@ export { CommonCountryModel } from './@apps/common/country';
 export { CountryResponse } from './@apps/common/country/domain/country.response';
 export { CountryMapper } from './@apps/common/country/domain/country.mapper';
 export { countries } from './@apps/common/country/infrastructure/seeds/country.seed';
+export { CommonAdministrativeAreaLevel1 } from './@apps/common/administrative-area-level-1/domain/administrative-area-level-1.aggregate';
+export { CommonAdministrativeAreaLevel1Model } from './@apps/common/administrative-area-level-1';
+export { AdministrativeAreaLevel1Response } from './@apps/common/administrative-area-level-1/domain/administrative-area-level-1.response';
+export { AdministrativeAreaLevel1Mapper } from './@apps/common/administrative-area-level-1/domain/administrative-area-level-1.mapper';
+export { administrativeAreasLevel1 } from './@apps/common/administrative-area-level-1/infrastructure/seeds/administrative-area-level-1.seed';

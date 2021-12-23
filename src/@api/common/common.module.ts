@@ -9,6 +9,7 @@ import { CommonCountryControllers, CommonCountryResolvers } from './country';
 import { IQueryBus } from 'aurora-ts-core';
 import { GetLangsQuery } from '../../@apps/common/lang/application/get/get-langs.query';
 import { Cache } from 'cache-manager';
+import { CommonAdministrativeAreaLevel1Controllers, CommonAdministrativeAreaLevel1Resolvers } from './administrative-area-level-1';
 
 @Module({
     imports: [
@@ -19,7 +20,8 @@ import { Cache } from 'cache-manager';
     ],
     controllers: [
         ...CommonLangControllers,
-        ...CommonCountryControllers
+        ...CommonCountryControllers,
+        ...CommonAdministrativeAreaLevel1Controllers
     ],
     providers: [
         ...CommonHandlers,
@@ -28,6 +30,7 @@ import { Cache } from 'cache-manager';
         ...CommonSagas,
         ...CommonLangResolvers,
         ...CommonCountryResolvers,
+        ...CommonAdministrativeAreaLevel1Resolvers
     ],
 })
 export class CommonModule
