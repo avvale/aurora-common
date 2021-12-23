@@ -11,6 +11,7 @@ import { GetLangsQuery } from '../../@apps/common/lang/application/get/get-langs
 import { Cache } from 'cache-manager';
 import { CommonAdministrativeAreaLevel1Controllers, CommonAdministrativeAreaLevel1Resolvers } from './administrative-area-level-1';
 import { CommonAdministrativeAreaLevel2Controllers, CommonAdministrativeAreaLevel2Resolvers } from './administrative-area-level-2';
+import { CommonAdministrativeAreaLevel3Controllers, CommonAdministrativeAreaLevel3Resolvers } from './administrative-area-level-3';
 
 @Module({
     imports: [
@@ -23,7 +24,8 @@ import { CommonAdministrativeAreaLevel2Controllers, CommonAdministrativeAreaLeve
         ...CommonLangControllers,
         ...CommonCountryControllers,
         ...CommonAdministrativeAreaLevel1Controllers,
-        ...CommonAdministrativeAreaLevel2Controllers
+        ...CommonAdministrativeAreaLevel2Controllers,
+        ...CommonAdministrativeAreaLevel3Controllers
     ],
     providers: [
         ...CommonHandlers,
@@ -33,7 +35,8 @@ import { CommonAdministrativeAreaLevel2Controllers, CommonAdministrativeAreaLeve
         ...CommonLangResolvers,
         ...CommonCountryResolvers,
         ...CommonAdministrativeAreaLevel1Resolvers,
-        ...CommonAdministrativeAreaLevel2Resolvers
+        ...CommonAdministrativeAreaLevel2Resolvers,
+        ...CommonAdministrativeAreaLevel3Resolvers
     ],
 })
 export class CommonModule
