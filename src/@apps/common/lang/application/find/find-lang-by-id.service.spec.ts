@@ -26,7 +26,7 @@ describe('FindLangByIdService', () =>
                 {
                     provide: ILangRepository,
                     useValue: {
-                        findById: (id) => {}
+                        findById: id => { /**/ }
                     }
                 }
             ]

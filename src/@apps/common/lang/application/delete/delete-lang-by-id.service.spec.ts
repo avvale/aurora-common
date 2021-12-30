@@ -27,8 +27,8 @@ describe('DeleteLangByIdService', () =>
                 {
                     provide : ILangRepository,
                     useValue: {
-                        deleteById: (id) => { /**/ },
-                        findById  : (id) => { /**/ },
+                        deleteById: id => { /**/ },
+                        findById  : id => { /**/ },
                     }
                 },
             ]

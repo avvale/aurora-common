@@ -100,7 +100,7 @@ export class CountryMapper implements IMapper
             new CountryI18NAdministrativeAreaLevel1(country.countryI18N.administrativeAreaLevel1),
             new CountryI18NAdministrativeAreaLevel2(country.countryI18N.administrativeAreaLevel2),
             new CountryI18NAdministrativeAreaLevel3(country.countryI18N.administrativeAreaLevel3),
-            this.options.eagerLoading ? new LangMapper({ eagerLoading: false }).mapModelToAggregate(country.lang) : undefined,
+            this.options.eagerLoading ? new LangMapper({ eagerLoading: false }).mapModelToAggregate(country.countryI18N.lang) : undefined,
         );
     }
 

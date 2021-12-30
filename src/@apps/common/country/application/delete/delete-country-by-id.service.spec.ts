@@ -29,15 +29,15 @@ describe('DeleteCountryByIdService', () =>
                 {
                     provide : ICountryRepository,
                     useValue: {
-                        deleteById: (id) => { /**/ },
-                        findById  : (id) => { /**/ },
+                        deleteById: id => { /**/ },
+                        findById  : id => { /**/ },
                     }
                 },
                 {
                     provide : ICountryI18NRepository,
                     useValue: {
-                        get   : (queryStatement) => { /**/ },
-                        delete: (queryStatement) => { /**/ }
+                        get   : queryStatement => { /**/ },
+                        delete: queryStatement => { /**/ }
                     }
                 },
             ]

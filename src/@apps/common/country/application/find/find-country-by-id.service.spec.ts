@@ -26,7 +26,7 @@ describe('FindCountryByIdService', () =>
                 {
                     provide: ICountryRepository,
                     useValue: {
-                        findById: (id) => {}
+                        findById: id => { /**/ }
                     }
                 }
             ]
