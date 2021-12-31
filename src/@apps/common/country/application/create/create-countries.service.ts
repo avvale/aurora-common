@@ -54,6 +54,7 @@ export class CreateCountriesService
             latitude: CountryLatitude,
             longitude: CountryLongitude,
             zoom: CountryZoom,
+            dataLang: CountryDataLang,
             langId: CountryI18NLangId,
             name: CountryI18NName,
             slug: CountryI18NSlug,

@@ -263,7 +263,7 @@
         },
         {
             "path": "src/@apps/common/administrative-area-level-1/infrastructure/seeds/administrative-area-level-1.seed.ts",
-            "integrity": "sha1:1a0d84d1a9057e09be325eec302c5840229dc7da"
+            "integrity": "sha1:643e42d9680b7946283b245e1836351a506052c0"
         },
         {
             "path": "src/@apps/common/administrative-area-level-1/infrastructure/sequelize/sequelize-administrative-area-level-1.model.ts",
@@ -495,7 +495,7 @@
         },
         {
             "path": "postman/common.administrative-area-level-1.postman.json",
-            "integrity": "sha1:01b89a0e98849bf6eaed02c23167631366cdf7c7"
+            "integrity": "sha1:6bf6d5f235ef4bdd84e692223548488a49d0ddae"
         }
     ]
 }
