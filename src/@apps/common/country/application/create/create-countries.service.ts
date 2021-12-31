@@ -78,7 +78,7 @@ export class CreateCountriesService
             country.latitude,
             country.longitude,
             country.zoom,
-            null, // dataLang
+            country.dataLang,
             new CountryCreatedAt({ currentTimestamp: true }),
             new CountryUpdatedAt({ currentTimestamp: true }),
             null, // deleteAt

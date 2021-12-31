@@ -39,7 +39,7 @@
         },
         {
             "path": "src/@apps/common/country/application/create/create-countries.service.ts",
-            "integrity": "sha1:bf3ccc06218bfcb6871273462cd9b89685b21787"
+            "integrity": "sha1:e7f4c5b874d6224a1cecd5678f9ce3277b1f5332"
         },
         {
             "path": "src/@apps/common/country/application/delete/delete-country-by-id.command-handler.spec.ts",
@@ -263,7 +263,7 @@
         },
         {
             "path": "src/@apps/common/country/infrastructure/seeds/country.seed.ts",
-            "integrity": "sha1:29c33da3d3bbd33d4ffdcec3e6054d8f8ea1ca1f"
+            "integrity": "sha1:03bd7706a8d60beb90e9192126e6954d25a2f657"
         },
         {
             "path": "src/@apps/common/country/infrastructure/sequelize/sequelize-country.model.ts",
@@ -603,7 +603,7 @@
         },
         {
             "path": "postman/common.country.postman.json",
-            "integrity": "sha1:d657bb5729a0df82132ec53c5f46cc46c419dbbc"
+            "integrity": "sha1:69d549b897c28d2c642c1e277b05fd376ad2a03d"
         }
     ]
 }
