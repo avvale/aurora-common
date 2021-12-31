@@ -20,6 +20,7 @@ aggregateProperties:
     relationshipModulePath: common/country
     relationshipKey: id
     relationshipField: country
+    relationshipAvoidConstraint: true
   - name: administrativeAreaLevel1Id
     type: id
     length: 36
@@ -29,6 +30,7 @@ aggregateProperties:
     relationshipModulePath: common/administrative-area-level-1
     relationshipKey: id
     relationshipField: administrativeAreaLevel1
+    relationshipAvoidConstraint: true
   - name: code
     type: varchar
     maxLength: 8

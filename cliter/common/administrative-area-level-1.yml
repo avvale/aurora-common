@@ -20,6 +20,7 @@ aggregateProperties:
     relationshipModulePath: common/country
     relationshipKey: id
     relationshipField: country
+    relationshipAvoidConstraint: true
   - name: code
     type: varchar
     maxLength: 8

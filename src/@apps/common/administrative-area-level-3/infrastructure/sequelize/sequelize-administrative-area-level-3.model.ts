@@ -21,15 +21,12 @@ export class CommonAdministrativeAreaLevel3Model extends Model<CommonAdministrat
         field: 'countryId',
         allowNull: false,
         type: DataTypes.UUID,
-        references: {
-            key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'NO ACTION',
     })
     countryId: string;
 
-    @BelongsTo(() => CommonCountryModel)
+    @BelongsTo(() => CommonCountryModel, {
+        constraints: false,
+    })
     country: CommonCountryModel;
 
     @ForeignKey(() => CommonAdministrativeAreaLevel1Model)
@@ -37,15 +34,12 @@ export class CommonAdministrativeAreaLevel3Model extends Model<CommonAdministrat
         field: 'administrativeAreaLevel1Id',
         allowNull: false,
         type: DataTypes.UUID,
-        references: {
-            key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'NO ACTION',
     })
     administrativeAreaLevel1Id: string;
 
-    @BelongsTo(() => CommonAdministrativeAreaLevel1Model)
+    @BelongsTo(() => CommonAdministrativeAreaLevel1Model, {
+        constraints: false,
+    })
     administrativeAreaLevel1: CommonAdministrativeAreaLevel1Model;
 
     @ForeignKey(() => CommonAdministrativeAreaLevel2Model)
@@ -53,15 +47,12 @@ export class CommonAdministrativeAreaLevel3Model extends Model<CommonAdministrat
         field: 'administrativeAreaLevel2Id',
         allowNull: false,
         type: DataTypes.UUID,
-        references: {
-            key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'NO ACTION',
     })
     administrativeAreaLevel2Id: string;
 
-    @BelongsTo(() => CommonAdministrativeAreaLevel2Model)
+    @BelongsTo(() => CommonAdministrativeAreaLevel2Model, {
+        constraints: false,
+    })
     administrativeAreaLevel2: CommonAdministrativeAreaLevel2Model;
 
     @Unique

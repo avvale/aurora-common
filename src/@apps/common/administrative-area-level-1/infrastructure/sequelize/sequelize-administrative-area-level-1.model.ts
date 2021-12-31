@@ -19,15 +19,12 @@ export class CommonAdministrativeAreaLevel1Model extends Model<CommonAdministrat
         field: 'countryId',
         allowNull: false,
         type: DataTypes.UUID,
-        references: {
-            key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'NO ACTION',
     })
     countryId: string;
 
-    @BelongsTo(() => CommonCountryModel)
+    @BelongsTo(() => CommonCountryModel, {
+        constraints: false,
+    })
     country: CommonCountryModel;
 
     @Unique
