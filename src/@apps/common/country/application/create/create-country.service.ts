@@ -87,6 +87,14 @@ export class CreateCountryService
             payload.administrativeAreaLevel3,
         );
 
+        // first try to save new i18n record, so we make sure that the record does not exist in the database.
+        await this.repositoryI18n.create(country, (aggregate: CommonCountry ) => aggregate.toI18nDTO(), (aggregate: CommonCountry ) => ({
+            where: {
+                countryId: aggregate['id']['value'],
+                langId: aggregate['langId']['value'],
+            }
+        }));
+
         try
         {
             // try get object from database
@@ -104,13 +112,6 @@ export class CreateCountryService
                 await this.repository.create(country);
             }
         }
-
-        await this.repositoryI18n.create(country, (aggregate: CommonCountry ) => aggregate.toI18nDTO(), (aggregate: CommonCountry ) => ({
-            where: {
-                countryId: aggregate['id']['value'],
-                langId: aggregate['langId']['value'],
-            }
-        }));
 
         // merge EventBus methods with object returned by the repository, to be able to apply and commit events
         const countryRegister = this.publisher.mergeObjectContext(
