@@ -19,7 +19,7 @@
         },
         {
             "path": "src/@apps/common/administrative-area-level-2/application/create/create-administrative-area-level-2.service.ts",
-            "integrity": "sha1:1739b91840842db774f4d4fb785d93d9c4b4fe32"
+            "integrity": "sha1:55517c18a47530336f6960a048bd6b8df92506fb"
         },
         {
             "path": "src/@apps/common/administrative-area-level-2/application/create/create-administrative-areas-level-2.command-handler.spec.ts",
@@ -263,7 +263,7 @@
         },
         {
             "path": "src/@apps/common/administrative-area-level-2/infrastructure/seeds/administrative-area-level-2.seed.ts",
-            "integrity": "sha1:56dd9065175d02c43cc0b6cef5a0a2c0d98fa442"
+            "integrity": "sha1:287d2aa1b50b991b51ccb5695f7b2e505baeb4d0"
         },
         {
             "path": "src/@apps/common/administrative-area-level-2/infrastructure/sequelize/sequelize-administrative-area-level-2.model.ts",
@@ -499,7 +499,7 @@
         },
         {
             "path": "postman/common.administrative-area-level-2.postman.json",
-            "integrity": "sha1:9eefd7f48812e87e5e2d831686e89af3ee7a54a3"
+            "integrity": "sha1:b107e676c725e89d9c64dd37bceeed1ae1178cbd"
         }
     ]
 }
