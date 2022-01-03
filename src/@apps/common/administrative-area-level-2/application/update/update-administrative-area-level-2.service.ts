@@ -64,7 +64,7 @@ export class UpdateAdministrativeAreaLevel2Service
 
 
         // update
-        await this.repository.update(administrativeAreaLevel2, constraint, cQMetadata);
+        await this.repository.update(administrativeAreaLevel2, { constraint, cQMetadata });
 
         // merge EventBus methods with object returned by the repository, to be able to apply and commit events
         const administrativeAreaLevel2Register = this.publisher.mergeObjectContext(

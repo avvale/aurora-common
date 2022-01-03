@@ -18,14 +18,14 @@ export class DeleteCountriesService
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<void>
     {
         // get object to delete
-        const countries = await this.repository.get(queryStatement, constraint, cQMetadata);
+        const countries = await this.repository.get({ queryStatement, constraint, cQMetadata });
 
-        await this.repositoryI18n.delete({
+        await this.repositoryI18n.delete({queryStatement: {
             where: {
                 countryId: { [Operator.in]: countries.map(item => item.id) }
             }
-        });
-        await this.repository.delete(queryStatement, constraint, cQMetadata);
+        }});
+        await this.repository.delete({ queryStatement, constraint, cQMetadata });
 
         // create AddCountriesContextEvent to have object wrapper to add event publisher functionality
         // insert EventBus in object, to be able to apply and commit events

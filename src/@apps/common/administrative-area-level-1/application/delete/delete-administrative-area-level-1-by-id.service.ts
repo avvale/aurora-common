@@ -16,11 +16,11 @@ export class DeleteAdministrativeAreaLevel1ByIdService
     public async main(id: AdministrativeAreaLevel1Id, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<void>
     {
         // get object to delete
-        const administrativeAreaLevel1 = await this.repository.findById(id, constraint, cQMetadata);
+        const administrativeAreaLevel1 = await this.repository.findById(id, { constraint, cQMetadata });
 
         // it is not necessary to pass the constraint in the delete, if the object
         // is not found in the findById, an exception will be thrown.
-        await this.repository.deleteById(administrativeAreaLevel1.id, {}, cQMetadata);
+        await this.repository.deleteById(administrativeAreaLevel1.id, { cQMetadata });
 
         // insert EventBus in object, to be able to apply and commit events
         const administrativeAreaLevel1Register = this.publisher.mergeObjectContext(administrativeAreaLevel1);

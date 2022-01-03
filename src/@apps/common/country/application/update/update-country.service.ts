@@ -94,8 +94,8 @@ export class UpdateCountryService
         delete country.dataLang;
 
         // update
-        await this.repository.update(country, constraint, cQMetadata);
-        await this.repositoryI18n.update(country, constraint, cQMetadata, (aggregate: CommonCountry) => aggregate.toI18nDTO(), { langId: country.langId.value, countryId: country.id.value });
+        await this.repository.update(country, { constraint, cQMetadata });
+        await this.repositoryI18n.update(country, { constraint, cQMetadata, dataFactory: (aggregate: CommonCountry) => aggregate.toI18nDTO(), findArguments: { langId: country.langId.value, countryId: country.id.value }});
 
         // merge EventBus methods with object returned by the repository, to be able to apply and commit events
         const countryRegister = this.publisher.mergeObjectContext(

@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { EventPublisher } from '@nestjs/cqrs';
 import {
     CountryId,
@@ -87,18 +87,12 @@ export class CreateCountryService
             payload.administrativeAreaLevel3,
         );
 
-        // first try to save new i18n record, so we make sure that the record does not exist in the database.
-        await this.repositoryI18n.create(country, (aggregate: CommonCountry ) => aggregate.toI18nDTO(), (aggregate: CommonCountry ) => ({
-            where: {
-                countryId: aggregate['id']['value'],
-                langId: aggregate['langId']['value'],
-            }
-        }));
-
         try
         {
             // try get object from database
-            const countryInDB = await this.repository.findById(country.id, { include: ['countryI18N']});
+            const countryInDB = await this.repository.findById(country.id, { constraint: { include: ['countryI18N']}});
+
+            if (countryInDB.dataLang.value.includes(country.langId.value)) throw new ConflictException(`Error to create CommonCountry, the id ${country['id']['value']} already exist in database`);
 
             // add new lang id to data lang field to create or update field
             country.dataLang = new CountryDataLang(_.union(countryInDB.dataLang.value, [country.langId.value]));
@@ -112,6 +106,20 @@ export class CreateCountryService
                 await this.repository.create(country);
             }
         }
+
+        // save new i18n record
+        await this.repositoryI18n.create(
+            country,
+            {
+                dataFactory         : (aggregate: CommonCountry ) => aggregate.toI18nDTO(),
+                finderQueryStatement: (aggregate: CommonCountry ) => ({
+                    where: {
+                        countryId: aggregate['id']['value'],
+                        langId: aggregate['langId']['value'],
+                    }
+                })
+            }
+        );
 
         // merge EventBus methods with object returned by the repository, to be able to apply and commit events
         const countryRegister = this.publisher.mergeObjectContext(

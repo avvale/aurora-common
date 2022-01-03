@@ -13,6 +13,6 @@ export class FindAdministrativeAreaLevel3Service
 
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<CommonAdministrativeAreaLevel3>
     {
-        return await this.repository.find(queryStatement, constraint, cQMetadata);
+        return await this.repository.find({ queryStatement, constraint, cQMetadata });
     }
 }

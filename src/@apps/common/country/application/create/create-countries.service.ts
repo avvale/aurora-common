@@ -93,7 +93,7 @@ export class CreateCountriesService
         // insert
         // delete duplicate elements from multiple languages
         await this.repository.insert(aggregateCountries.filter((country, index, self) => index === self.findIndex(t => t.id.value === country.id.value)));
-        await this.repositoryI18n.insert(aggregateCountries, {}, aggregate => aggregate.toI18nDTO());
+        await this.repositoryI18n.insert(aggregateCountries, { dataFactory: aggregate => aggregate.toI18nDTO() });
 
         // create AddCountriesContextEvent to have object wrapper to add event publisher functionality
         // insert EventBus in object, to be able to apply and commit events

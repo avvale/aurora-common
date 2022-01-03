@@ -13,6 +13,6 @@ export class FindLangService
 
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<CommonLang>
     {
-        return await this.repository.find(queryStatement, constraint, cQMetadata);
+        return await this.repository.find({ queryStatement, constraint, cQMetadata });
     }
 }

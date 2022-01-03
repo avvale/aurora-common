@@ -13,6 +13,6 @@ export class GetAdministrativeAreasLevel1Service
 
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<CommonAdministrativeAreaLevel1[]>
     {
-        return await this.repository.get(queryStatement, constraint, cQMetadata);
+        return await this.repository.get({ queryStatement, constraint, cQMetadata });
     }
 }

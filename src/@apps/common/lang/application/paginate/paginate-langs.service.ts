@@ -14,6 +14,6 @@ export class PaginateLangsService
 
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<Pagination<CommonLang>>
     {
-        return await this.repository.paginate(queryStatement, constraint, cQMetadata);
+        return await this.repository.paginate({ queryStatement, constraint, cQMetadata });
     }
 }

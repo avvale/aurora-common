@@ -14,6 +14,6 @@ export class PaginateAdministrativeAreasLevel1Service
 
     public async main(queryStatement?: QueryStatement, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<Pagination<CommonAdministrativeAreaLevel1>>
     {
-        return await this.repository.paginate(queryStatement, constraint, cQMetadata);
+        return await this.repository.paginate({ queryStatement, constraint, cQMetadata });
     }
 }

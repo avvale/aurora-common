@@ -18,12 +18,16 @@ export class DeleteCountryByIdService
     public async main(id: CountryId, constraint?: QueryStatement, cQMetadata?: CQMetadata): Promise<void>
     {
         // get object to delete
-        const country = await this.repository.findById(id, constraint, cQMetadata);
+        const country = await this.repository.findById(id, { constraint, cQMetadata });
 
         // it is not necessary to pass the constraint in the delete, if the object
         // is not found in the findById, an exception will be thrown.
-        await this.repositoryI18n.delete({ where: { countryId: country.id.value }});
-        await this.repository.deleteById(country.id, {}, cQMetadata);
+        await this.repositoryI18n.delete({ 
+            queryStatement: { 
+                where: { countryId: country.id.value }
+            }
+        });
+        await this.repository.deleteById(country.id, { cQMetadata });
 
         // insert EventBus in object, to be able to apply and commit events
         const countryRegister = this.publisher.mergeObjectContext(country);
