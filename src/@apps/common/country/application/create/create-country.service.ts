@@ -96,7 +96,7 @@ export class CreateCountryService
 
             // add new lang id to data lang field to create or update field
             country.dataLang = new CountryDataLang(_.union(countryInDB.dataLang.value, [country.langId.value]));
-            await this.repository.update(country);
+            await this.repository.update(country, { dataFactory: aggregate => _.pick(aggregate.toI18nDTO(), 'id', 'dataLang') });
         }
         catch (error)
         {
