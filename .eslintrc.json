@@ -1,6 +1,6 @@
 {
     "env": {
-        "browser": true,
+        "node": true,
         "es2021": true
     },
     "parser": "@typescript-eslint/parser",
@@ -16,15 +16,25 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "rules": {
+        "@typescript-eslint/member-delimiter-style": ["error", {
+            "multiline": {
+                "delimiter": "semi",
+                "requireLast": true
+            },
+            "singleline": {
+                "delimiter": "semi",
+                "requireLast": true
+            }
+        }],
         "array-bracket-spacing": ["error", "never"],
         "arrow-parens": ["error" ,"as-needed"],
         "brace-style": ["error", "allman", { "allowSingleLine": true }],
         "comma-dangle": ["error", {
-            "arrays": "only-multiline",
-            "objects": "only-multiline",
-            "imports": "only-multiline",
-            "exports": "only-multiline",
-            "functions": "only-multiline"
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline"
         }],
         "grouped-accessor-pairs": ["error", "setBeforeGet"],
         "import/prefer-default-export": "off",
