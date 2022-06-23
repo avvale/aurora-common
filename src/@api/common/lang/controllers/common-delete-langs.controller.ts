@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Controller, Delete, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiBody, ApiQuery } from '@nestjs/swagger';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 import { CommonLangDto } from '../dto';
 
 // @apps
@@ -22,7 +22,7 @@ export class CommonDeleteLangsController
     @ApiQuery({ name: 'query', type: QueryStatement })
     async main(
         @Body('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

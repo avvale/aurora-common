@@ -12,7 +12,7 @@ export class CommonCreateAdministrativeAreaLevel1Dto
     @ApiProperty({
         type       : String,
         description: 'countryId [input here api field description]',
-        example    : 'f2d86d38-48f9-43ee-a075-172cff27f3a3',
+        example    : 'b80dda1d-5533-40b0-9c0a-9c09b9ed38e5',
     })
     countryId: string;
 

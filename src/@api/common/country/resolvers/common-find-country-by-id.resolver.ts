@@ -1,5 +1,5 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
+import { ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonFindCountryByIdHandler } from '../handlers/common-find-country-by-id.handler';
@@ -15,7 +15,7 @@ export class CommonFindCountryByIdResolver
     @Query('commonFindCountryById')
     async main(
         @Args('id') id: string,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
         @ContentLanguage() contentLanguage?: string,
     ): Promise<CommonCountry>

@@ -1,5 +1,5 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonPaginateLangsHandler } from '../handlers/common-paginate-langs.handler';
@@ -15,7 +15,7 @@ export class CommonPaginateLangsResolver
     @Query('commonPaginateLangs')
     async main(
         @Args('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     ): Promise<Pagination>
     {

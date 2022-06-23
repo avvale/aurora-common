@@ -84,7 +84,7 @@ export class CommonCreateCountryDto
     @ApiProperty({
         type       : String,
         description: 'langId [input here api field description]',
-        example    : '0e20da4e-45e8-4376-8e51-f1f367335719',
+        example    : 'dca92922-870b-4158-aa5a-fff76ab2567b',
     })
     langId: string;
 

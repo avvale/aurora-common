@@ -73,8 +73,16 @@ describe('CommonPaginateCountriesHandler', () =>
 
         test('should return a countries', async () =>
         {
-            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve(countries)));
-            expect(await handler.main()).toBe(countries);
+            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve({
+                total: countries.length,
+                count: countries.length,
+                rows : countries,
+            })));
+            expect(await handler.main()).toEqual({
+                total: countries.length,
+                count: countries.length,
+                rows : countries,
+            });
         });
     });
 });

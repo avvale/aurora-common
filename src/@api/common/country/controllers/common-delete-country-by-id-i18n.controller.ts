@@ -1,6 +1,6 @@
 import { Controller, Param, Delete } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { AddI18NConstraintService, Constraint, ContentLanguage, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
+import { AddI18NConstraintService, ContentLanguage, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 import { CountryDto } from '../dto/country.dto';
 
 // @apps
@@ -22,7 +22,7 @@ export class CommonDeleteCountryByIdI18NController
     @ApiOkResponse({ description: 'The record has been deleted successfully.', type: CountryDto })
     async main(
         @Param('id') id: string,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
         @ContentLanguage() contentLanguage?: string,
     )

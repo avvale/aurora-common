@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Body, Controller, HttpCode, Post } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiBody, ApiQuery } from '@nestjs/swagger';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 import { CommonAdministrativeAreaLevel2Dto } from '../dto';
 
 // @apps
@@ -23,7 +23,7 @@ export class CommonGetAdministrativeAreasLevel2Controller
     @ApiQuery({ name: 'query', type: QueryStatement })
     async main(
         @Body('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

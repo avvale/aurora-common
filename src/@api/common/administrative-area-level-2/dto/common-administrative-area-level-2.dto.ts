@@ -14,7 +14,7 @@ export class CommonAdministrativeAreaLevel2Dto
     @ApiProperty({
         type       : String,
         description: 'countryId [input here api field description]',
-        example    : 'f7b0da61-ea7c-4bc5-a873-09a77360704f',
+        example    : '688458c6-125f-44b7-8345-fb2213fb3275',
     })
     countryId: string;
 
@@ -27,7 +27,7 @@ export class CommonAdministrativeAreaLevel2Dto
     @ApiProperty({
         type       : String,
         description: 'administrativeAreaLevel1Id [input here api field description]',
-        example    : 'bba5e478-6e8a-4936-a7a4-5dda9d098d6d',
+        example    : '7859531b-e547-4a72-8f11-163140f6b753',
     })
     administrativeAreaLevel1Id: string;
 

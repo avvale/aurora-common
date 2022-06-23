@@ -62,7 +62,9 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
     abstract create(
         country: CommonCountry,
         options?: {
+            createOptions?: LiteralObject;
             dataFactory?: (aggregate: CommonCountry) => LiteralObject;
+            // arguments to find object and check if object is duplicated
             finderQueryStatement?: (aggregate: CommonCountry) => QueryStatement;
         }
     ): Promise<void>;
@@ -76,14 +78,28 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
         }
     ): Promise<void>;
 
-    // update record
-    abstract update(
+    // update record by id
+    abstract updateById(
         country: CommonCountry,
         options?: {
+            updateByIdOptions?: LiteralObject;
             constraint?: QueryStatement;
             cQMetadata?: CQMetadata;
             dataFactory?: (aggregate: CommonCountry) => LiteralObject;
+            // arguments to find object to update, with i18n we use langId and id relationship with parent entity
             findArguments?: LiteralObject;
+        }
+    ): Promise<void>;
+
+    // update records
+    abstract update(
+        country: CommonCountry,
+        options?: {
+            updateOptions?: LiteralObject;
+            queryStatement?: QueryStatement;
+            constraint?: QueryStatement;
+            cQMetadata?: CQMetadata;
+            dataFactory?: (aggregate: CommonCountry) => LiteralObject;
         }
     ): Promise<void>;
 
@@ -91,6 +107,7 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
     abstract deleteById(
         id: CountryId,
         options?: {
+            deleteOptions?: LiteralObject;
             constraint?: QueryStatement;
             cQMetadata?: CQMetadata;
         }
@@ -99,6 +116,7 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
     // delete records
     abstract delete(
         options?: {
+            deleteOptions?: LiteralObject;
             queryStatement?: QueryStatement;
             constraint?: QueryStatement;
             cQMetadata?: CQMetadata;

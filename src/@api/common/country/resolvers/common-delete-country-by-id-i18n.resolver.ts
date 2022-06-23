@@ -1,5 +1,5 @@
 import { Resolver, Args, Mutation } from '@nestjs/graphql';
-import { AddI18NConstraintService, Constraint, ContentLanguage, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
+import { AddI18NConstraintService, ContentLanguage, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { FindCountryByIdQuery } from '@apps/common/country/application/find/find-country-by-id.query';
@@ -17,7 +17,7 @@ export class CommonDeleteCountryByIdI18NResolver
     @Mutation('commonDeleteCountryById')
     async main(
         @Args('id') id: string,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
         @ContentLanguage() contentLanguage?: string,
     )

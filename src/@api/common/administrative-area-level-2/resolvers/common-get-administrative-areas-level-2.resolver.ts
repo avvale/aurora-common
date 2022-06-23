@@ -1,5 +1,5 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonGetAdministrativeAreasLevel2Handler } from '../handlers/common-get-administrative-areas-level-2.handler';
@@ -15,7 +15,7 @@ export class CommonGetAdministrativeAreasLevel2Resolver
     @Query('commonGetAdministrativeAreasLevel2')
     async main(
         @Args('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     ): Promise<CommonAdministrativeAreaLevel2[]>
     {

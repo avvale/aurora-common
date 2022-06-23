@@ -463,7 +463,7 @@ describe('administrative-area-level-3', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                latitude: 63870143270027.73,
+                latitude: 88648902483445.12,
             })
             .expect(400)
             .then(res =>
@@ -478,7 +478,7 @@ describe('administrative-area-level-3', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                longitude: 61336490543120.1,
+                longitude: 30847994072442.973,
             })
             .expect(400)
             .then(res =>
@@ -493,7 +493,7 @@ describe('administrative-area-level-3', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                latitude: 537451653619.1824,
+                latitude: 952379223776.788,
             })
             .expect(400)
             .then(res =>
@@ -508,7 +508,7 @@ describe('administrative-area-level-3', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                longitude: 196137391922.83005,
+                longitude: 205652984148.17084,
             })
             .expect(400)
             .then(res =>
@@ -573,7 +573,7 @@ describe('administrative-area-level-3', () =>
                 {
                     where:
                     {
-                        id: '0ad6e372-b303-463c-9a10-74a4259aab8e',
+                        id: '52d37690-b39a-41c7-8dae-7f29367a9b9a',
                     },
                 },
             })
@@ -613,18 +613,18 @@ describe('administrative-area-level-3', () =>
             });
     });
 
-    test('/REST:GET common/administrative-area-level-3/find/{id} - Got 404 Not Found', () =>
+    test('/REST:POST common/administrative-area-level-3/find/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/administrative-area-level-3/find/8913fbfb-0d62-48c4-ae95-8afa56468afa')
+            .post('/common/administrative-area-level-3/find/0499fbff-31ca-47f0-b70c-4118f5c67eea')
             .set('Accept', 'application/json')
             .expect(404);
     });
 
-    test('/REST:GET common/administrative-area-level-3/find/{id}', () =>
+    test('/REST:POST common/administrative-area-level-3/find/{id}', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/administrative-area-level-3/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
+            .post('/common/administrative-area-level-3/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
             .set('Accept', 'application/json')
             .expect(200)
             .then(res =>
@@ -640,7 +640,7 @@ describe('administrative-area-level-3', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                id: 'ac972304-ad19-4324-8b9f-d2897b30ac4b',
+                id: '06584582-75c4-4d8e-bf99-cf98778182de',
             })
             .expect(404);
     });
@@ -664,7 +664,7 @@ describe('administrative-area-level-3', () =>
     test('/REST:DELETE common/administrative-area-level-3/delete/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .delete('/common/administrative-area-level-3/delete/b3481247-01c0-4d1e-9dc1-4f6d0c1c25ac')
+            .delete('/common/administrative-area-level-3/delete/1dcc439c-997e-4bac-8a3b-b9ab2fa61a7c')
             .set('Accept', 'application/json')
             .expect(404);
     });
@@ -858,7 +858,7 @@ describe('administrative-area-level-3', () =>
                     {
                         where:
                         {
-                            id: '14abb3d2-2461-4808-8555-86bf7ca7a8af',
+                            id: 'e61f01dc-1cb3-499b-8d18-44beaf50e96c',
                         },
                     },
                 },
@@ -939,7 +939,7 @@ describe('administrative-area-level-3', () =>
                     }
                 `,
                 variables: {
-                    id: '8cb8d347-0966-4a42-ae9e-43ca5a51990c',
+                    id: 'f8fd04bb-b789-47bb-b887-9b7962526f14',
                 },
             })
             .expect(200)
@@ -1013,7 +1013,7 @@ describe('administrative-area-level-3', () =>
                 variables: {
                     payload: {
                         ...mockData[0],
-                        id: 'd3186996-1689-418b-826b-78c7089c657d',
+                        id: 'f337deac-98f9-464b-91bc-fc704bc9117e',
                     },
                 },
             })
@@ -1132,7 +1132,7 @@ describe('administrative-area-level-3', () =>
                     }
                 `,
                 variables: {
-                    id: 'c453aea9-661b-45b5-b311-aa33aa0bcd03',
+                    id: '8f73a34e-afd8-49a5-8107-b0b2641c94f6',
                 },
             })
             .expect(200)

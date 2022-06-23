@@ -480,7 +480,7 @@ describe('lang', () =>
                 {
                     where:
                     {
-                        id: '03a0aa3f-3bf5-4581-b50c-7411ed7555b6',
+                        id: '1d586482-ba57-46d3-b7a7-8fdaaea99c71',
                     },
                 },
             })
@@ -520,18 +520,18 @@ describe('lang', () =>
             });
     });
 
-    test('/REST:GET common/lang/find/{id} - Got 404 Not Found', () =>
+    test('/REST:POST common/lang/find/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/lang/find/ee7c92d0-6de9-4459-8f91-2c6c0e92fc79')
+            .post('/common/lang/find/858e1375-64af-4f5f-8ffd-8970712c9119')
             .set('Accept', 'application/json')
             .expect(404);
     });
 
-    test('/REST:GET common/lang/find/{id}', () =>
+    test('/REST:POST common/lang/find/{id}', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/lang/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
+            .post('/common/lang/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
             .set('Accept', 'application/json')
             .expect(200)
             .then(res =>
@@ -547,7 +547,7 @@ describe('lang', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                id: '09c6831e-3687-439e-9c5f-a173d61432a2',
+                id: '27c087e1-a022-45f5-9d24-e3aafbe83c9d',
             })
             .expect(404);
     });
@@ -571,7 +571,7 @@ describe('lang', () =>
     test('/REST:DELETE common/lang/delete/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .delete('/common/lang/delete/7dc6fbe7-9a64-4d52-85c5-26d9dcd72038')
+            .delete('/common/lang/delete/2eaecd5b-2f46-4f7d-b09a-6ccc42c15875')
             .set('Accept', 'application/json')
             .expect(404);
     });
@@ -767,7 +767,7 @@ describe('lang', () =>
                     {
                         where:
                         {
-                            id: '428cae46-0482-4978-bc50-6bfbb3015111',
+                            id: '3e8d99ec-6956-463e-8f00-8753019ec46f',
                         },
                     },
                 },
@@ -852,7 +852,7 @@ describe('lang', () =>
                     }
                 `,
                 variables: {
-                    id: '24429672-86eb-4da4-b525-47bb9563d335',
+                    id: '3fd2bbce-c13f-478e-9476-9434d2979da9',
                 },
             })
             .expect(200)
@@ -930,7 +930,7 @@ describe('lang', () =>
                 variables: {
                     payload: {
                         ...mockData[0],
-                        id: '12bbdffc-7ac5-430b-a88e-2380c9a1ad74',
+                        id: 'bb4435b5-38b4-418f-a2e7-439694f6e9fa',
                     },
                 },
             })
@@ -1055,7 +1055,7 @@ describe('lang', () =>
                     }
                 `,
                 variables: {
-                    id: '2babe208-4466-4b13-b6dc-729502045ddc',
+                    id: '31776299-716e-4065-8f01-b89282eac0fb',
                 },
             })
             .expect(200)

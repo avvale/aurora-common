@@ -56,8 +56,16 @@ describe('CommonPaginateAdministrativeAreasLevel1Handler', () =>
 
         test('should return a administrativeAreasLevel1', async () =>
         {
-            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve(administrativeAreasLevel1)));
-            expect(await handler.main()).toBe(administrativeAreasLevel1);
+            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve({
+                total: administrativeAreasLevel1.length,
+                count: administrativeAreasLevel1.length,
+                rows : administrativeAreasLevel1,
+            })));
+            expect(await handler.main()).toEqual({
+                total: administrativeAreasLevel1.length,
+                count: administrativeAreasLevel1.length,
+                rows : administrativeAreasLevel1,
+            });
         });
     });
 });

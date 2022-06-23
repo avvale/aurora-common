@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { Controller, Param, Delete } from '@nestjs/common';
+import { Body, Controller, Param, Delete } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { Constraint, ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
+import { ContentLanguage, QueryStatement, Timezone } from 'aurora-ts-core';
 import { CommonCountryDto } from '../dto';
 
 // @apps
@@ -20,7 +20,7 @@ export class CommonDeleteCountryByIdController
     @ApiOkResponse({ description: 'The record has been deleted successfully.', type: CommonCountryDto })
     async main(
         @Param('id') id: string,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
         @ContentLanguage() contentLanguage?: string,
     )

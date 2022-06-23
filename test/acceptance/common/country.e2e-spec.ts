@@ -559,7 +559,7 @@ describe('country', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                latitude: 60625455178852.74,
+                latitude: 36865733905624.516,
             })
             .expect(400)
             .then(res =>
@@ -574,7 +574,7 @@ describe('country', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                longitude: 82660826644270.61,
+                longitude: 23492607017836.617,
             })
             .expect(400)
             .then(res =>
@@ -589,7 +589,7 @@ describe('country', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                latitude: 141244149066.52014,
+                latitude: 319765352151.4302,
             })
             .expect(400)
             .then(res =>
@@ -604,7 +604,7 @@ describe('country', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                longitude: 987199431023.1672,
+                longitude: 261496052269.8142,
             })
             .expect(400)
             .then(res =>
@@ -669,7 +669,7 @@ describe('country', () =>
                 {
                     where:
                     {
-                        id: '5cfe07cc-9ce5-4b36-8930-64afee4a8032',
+                        id: 'fc407597-6888-4f1e-8be5-31229fb1b62f',
                     },
                 },
             })
@@ -709,18 +709,18 @@ describe('country', () =>
             });
     });
 
-    test('/REST:GET common/country/find/{id} - Got 404 Not Found', () =>
+    test('/REST:POST common/country/find/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/country/find/1fb3b3a8-1226-40cb-9b31-a79a75ade652')
+            .post('/common/country/find/8a108b12-e3fe-4d06-b26e-04bb3194db24')
             .set('Accept', 'application/json')
             .expect(404);
     });
 
-    test('/REST:GET common/country/find/{id}', () =>
+    test('/REST:POST common/country/find/{id}', () =>
     {
         return request(app.getHttpServer())
-            .get('/common/country/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
+            .post('/common/country/find/5b19d6ac-4081-573b-96b3-56964d5326a8')
             .set('Accept', 'application/json')
             .expect(200)
             .then(res =>
@@ -736,7 +736,7 @@ describe('country', () =>
             .set('Accept', 'application/json')
             .send({
                 ...mockData[0],
-                id: '1b7b7ddf-21f1-4806-aa65-3660a8c61565',
+                id: '420b1206-db4c-4962-a303-8fcfb695faa6',
             })
             .expect(404);
     });
@@ -760,7 +760,7 @@ describe('country', () =>
     test('/REST:DELETE common/country/delete/{id} - Got 404 Not Found', () =>
     {
         return request(app.getHttpServer())
-            .delete('/common/country/delete/74cfc5ff-05c5-421d-89ec-52c4574d3248')
+            .delete('/common/country/delete/53dab7b2-1806-45dc-88e3-6c2c24679c51')
             .set('Accept', 'application/json')
             .expect(404);
     });
@@ -994,7 +994,7 @@ describe('country', () =>
                     {
                         where:
                         {
-                            id: 'a4b2fbe6-de2f-47cf-8573-7940f9910048',
+                            id: '21527a9c-d2e4-4d54-943c-280b7d180fd8',
                         },
                     },
                 },
@@ -1101,7 +1101,7 @@ describe('country', () =>
                     }
                 `,
                 variables: {
-                    id: 'fdeac672-9a42-4f3d-9610-ac211a9d399a',
+                    id: 'f330713b-71c3-4052-8251-45ee9be41fb1',
                 },
             })
             .expect(200)
@@ -1201,7 +1201,7 @@ describe('country', () =>
                 variables: {
                     payload: {
                         ...mockData[0],
-                        id: '6c7f9a0a-654f-43cb-a6f9-fe450bd1007d',
+                        id: 'eb7c8bdb-839c-486a-8608-fc7712f59181',
                     },
                 },
             })
@@ -1359,7 +1359,7 @@ describe('country', () =>
                     }
                 `,
                 variables: {
-                    id: 'c784bc89-20b1-4380-8f16-8a30f5d96e84',
+                    id: 'd5cce1df-85ad-4049-a607-85b45456c0b1',
                 },
             })
             .expect(200)

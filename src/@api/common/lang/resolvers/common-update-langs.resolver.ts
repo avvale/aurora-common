@@ -1,5 +1,5 @@
 import { Resolver, Args, Mutation } from '@nestjs/graphql';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonUpdateLangsHandler } from '../handlers/common-update-langs.handler';
@@ -16,7 +16,7 @@ export class CommonUpdateLangsResolver
     async main(
         @Args('payload') payload: CommonUpdateLangsInput,
         @Args('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     ): Promise<CommonLang>
     {

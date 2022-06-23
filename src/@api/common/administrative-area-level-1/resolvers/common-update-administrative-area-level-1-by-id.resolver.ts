@@ -1,5 +1,5 @@
 import { Resolver, Args, Mutation } from '@nestjs/graphql';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonUpdateAdministrativeAreaLevel1ByIdHandler } from '../handlers/common-update-administrative-area-level-1-by-id.handler';
@@ -15,7 +15,7 @@ export class CommonUpdateAdministrativeAreaLevel1ByIdResolver
     @Mutation('commonUpdateAdministrativeAreaLevel1ById')
     async main(
         @Args('payload') payload: CommonUpdateAdministrativeAreaLevel1ByIdInput,
-        @Constraint() constraint?: QueryStatement,
+        @Args('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     ): Promise<CommonAdministrativeAreaLevel1>
     {

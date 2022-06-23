@@ -56,8 +56,16 @@ describe('CommonPaginateLangsHandler', () =>
 
         test('should return a langs', async () =>
         {
-            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve(langs)));
-            expect(await handler.main()).toBe(langs);
+            jest.spyOn(queryBus, 'ask').mockImplementation(() => new Promise(resolve => resolve({
+                total: langs.length,
+                count: langs.length,
+                rows : langs,
+            })));
+            expect(await handler.main()).toEqual({
+                total: langs.length,
+                count: langs.length,
+                rows : langs,
+            });
         });
     });
 });

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Controller, Put, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { Constraint, FormatLangCode, QueryStatement, Timezone } from 'aurora-ts-core';
+import { FormatLangCode, QueryStatement, Timezone } from 'aurora-ts-core';
 import { CommonCountryDto, CommonUpdateCountriesDto } from '../dto';
 
 // @apps
@@ -21,7 +21,7 @@ export class CommonUpdateCountriesController
     async main(
         @Body() payload: CommonUpdateCountriesDto,
         @Body('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {

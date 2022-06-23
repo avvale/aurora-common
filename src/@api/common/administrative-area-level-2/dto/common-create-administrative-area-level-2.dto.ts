@@ -12,14 +12,14 @@ export class CommonCreateAdministrativeAreaLevel2Dto
     @ApiProperty({
         type       : String,
         description: 'countryId [input here api field description]',
-        example    : '2469a4d1-3687-4b1a-bf79-16e18cea817d',
+        example    : 'aba35d99-6e57-4a9e-8443-a41ca62309af',
     })
     countryId: string;
 
     @ApiProperty({
         type       : String,
         description: 'administrativeAreaLevel1Id [input here api field description]',
-        example    : '656ce9a8-42c6-4ea4-a396-6c5cebe07616',
+        example    : 'f9f91cbf-3ec1-414e-a9c3-6b6c97d3aea6',
     })
     administrativeAreaLevel1Id: string;
 

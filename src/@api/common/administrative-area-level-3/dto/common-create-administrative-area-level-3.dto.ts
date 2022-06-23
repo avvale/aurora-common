@@ -12,21 +12,21 @@ export class CommonCreateAdministrativeAreaLevel3Dto
     @ApiProperty({
         type       : String,
         description: 'countryId [input here api field description]',
-        example    : 'b1778f25-9ddd-44f9-9005-d6cec3713003',
+        example    : '6f3c3541-9f9a-4be9-aba8-2b0217c5a681',
     })
     countryId: string;
 
     @ApiProperty({
         type       : String,
         description: 'administrativeAreaLevel1Id [input here api field description]',
-        example    : '3ee66795-a5f7-4af3-8a93-cf00e164490c',
+        example    : '7eb32fa8-329c-4a2c-82df-e0c744192474',
     })
     administrativeAreaLevel1Id: string;
 
     @ApiProperty({
         type       : String,
         description: 'administrativeAreaLevel2Id [input here api field description]',
-        example    : '373c0360-d1a1-4785-8573-1c71ccfe6115',
+        example    : '6aad0325-6a0a-4be4-b505-9034d074771f',
     })
     administrativeAreaLevel2Id: string;
 

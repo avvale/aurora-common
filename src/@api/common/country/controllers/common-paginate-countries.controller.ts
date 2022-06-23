@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Body, Controller, HttpCode, Post } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation, ApiQuery } from '@nestjs/swagger';
-import { Constraint, ContentLanguage, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
+import { ContentLanguage, Pagination, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
 import { CommonPaginateCountriesHandler } from '../handlers/common-paginate-countries.handler';
@@ -22,7 +22,7 @@ export class CommonPaginateCountriesController
     @ApiQuery({ name: 'constraint', type: QueryStatement })
     async main(
         @Body('query') queryStatement?: QueryStatement,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
         @ContentLanguage() contentLanguage?: string,
     )

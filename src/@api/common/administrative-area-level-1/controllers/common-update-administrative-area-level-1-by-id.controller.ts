@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Controller, Put, Body } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
-import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
+import { QueryStatement, Timezone } from 'aurora-ts-core';
 import { CommonAdministrativeAreaLevel1Dto, CommonUpdateAdministrativeAreaLevel1ByIdDto } from '../dto';
 
 // @apps
@@ -20,7 +20,7 @@ export class CommonUpdateAdministrativeAreaLevel1ByIdController
     @ApiOkResponse({ description: 'The record has been successfully updated.', type: CommonAdministrativeAreaLevel1Dto })
     async main(
         @Body() payload: CommonUpdateAdministrativeAreaLevel1ByIdDto,
-        @Constraint() constraint?: QueryStatement,
+        @Body('constraint') constraint?: QueryStatement,
         @Timezone() timezone?: string,
     )
     {
