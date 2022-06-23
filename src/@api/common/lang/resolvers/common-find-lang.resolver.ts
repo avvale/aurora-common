@@ -1,15 +1,15 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindLangQuery } from '../../../../@apps/common/lang/application/find/find-lang.query';
-import { CommonLang } from './../../../../graphql';
+import { CommonFindLangHandler } from '../handlers/common-find-lang.handler';
+import { CommonLang } from '../../../../graphql';
 
 @Resolver()
 export class CommonFindLangResolver
 {
     constructor(
-        private readonly queryBus: IQueryBus,
+        private readonly handler: CommonFindLangHandler,
     ) {}
 
     @Query('commonFindLang')
@@ -19,6 +19,10 @@ export class CommonFindLangResolver
         @Timezone() timezone?: string,
     ): Promise<CommonLang>
     {
-        return await this.queryBus.ask(new FindLangQuery(queryStatement, constraint, { timezone }));
+        return await this.handler.main(
+            queryStatement,
+            constraint,
+            timezone,
+        );
     }
 }

@@ -1,6 +1,6 @@
 {
     "info": {
-		"_postman_id"   : "6218e388-11ee-4dae-bc4f-121df2fac958",
+		"_postman_id"   : "9862b210-2ecb-4ebc-8ff0-bb8309c0bb57",
 		"name"          : "@apps - common/administrative-area-level-1",
 		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -15,7 +15,7 @@
 					"mode": "graphql",
 					"graphql": {
 						"query": "mutation ($payload:CommonCreateAdministrativeAreaLevel1Input!)\n{\n\tcommonCreateAdministrativeAreaLevel1 (payload:$payload)\n\t{\n\t\tid\n\t\tcountryId\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t}\n}",
-                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"anu3otq4\", \n\t\t\"customCode\": \"9e6x21mb52\", \n\t\t\"name\": \"Rustic Soft Cheese\", \n\t\t\"slug\": \"fugiat-voluptatem-consequatur\", \n\t\t\"latitude\": 70208590286178540, \n\t\t\"longitude\": 60080368475625000, \n\t\t\"zoom\": 52\n\t}\n}"
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"hfdl6kp\", \n\t\t\"customCode\": \"s7hovo7rg\", \n\t\t\"name\": \"Unbranded Metal Soap\", \n\t\t\"slug\": \"consectetur-perferendis-et\", \n\t\t\"latitude\": 6863232980465.267, \n\t\t\"longitude\": 5984140890932.158, \n\t\t\"zoom\": 2\n\t}\n}"
 					}
 				},
 				"url": {
@@ -39,7 +39,7 @@
 					"mode": "graphql",
 					"graphql": {
 						"query": "mutation ($payload:[CommonCreateAdministrativeAreaLevel1Input]!)\n{\n\tcommonCreateAdministrativeAreasLevel1 (payload:$payload)\n}",
-						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"038ab72e-e3b9-409f-8eee-dd8ef2f7f970\", \n\t\t\t\"countryId\": \"864b7fdc-debc-481c-a873-af0656e8d201\", \n\t\t\t\"code\": \"mhggzoat\", \n\t\t\t\"customCode\": \"gah159nmds\", \n\t\t\t\"name\": \"Gorgeous Concrete Ball\", \n\t\t\t\"slug\": \"quod-maiores-fugiat\", \n\t\t\t\"latitude\": 41436193774421736, \n\t\t\t\"longitude\": 75570725445407470, \n\t\t\t\"zoom\": 97\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"63b6d25e-c9ad-446e-8cb0-172efd684c57\", \n\t\t\t\"countryId\": \"6bc5aac8-ec79-4f91-a310-f051ed6438f9\", \n\t\t\t\"code\": \"z84h7x7t\", \n\t\t\t\"customCode\": \"rmh52yujj2\", \n\t\t\t\"name\": \"Handcrafted Rubber Keyboard\", \n\t\t\t\"slug\": \"porro-autem-veritatis\", \n\t\t\t\"latitude\": 95208305390698830, \n\t\t\t\"longitude\": 46166471053439590, \n\t\t\t\"zoom\": 51\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"c1111b5e-65b3-4c9d-8833-9f4439400ff5\", \n\t\t\t\"countryId\": \"142814d9-8c5f-4c91-b8f0-a60d6b518ac7\", \n\t\t\t\"code\": \"mmqsfd5m\", \n\t\t\t\"customCode\": \"5paysme34b\", \n\t\t\t\"name\": \"Ergonomic Metal Chips\", \n\t\t\t\"slug\": \"temporibus-distinctio-laborum\", \n\t\t\t\"latitude\": 15158093082042652, \n\t\t\t\"longitude\": 30041489947238676, \n\t\t\t\"zoom\": 16\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"35b3f966-5f6e-4b0e-aeae-e140585bf3cf\", \n\t\t\t\"countryId\": \"9cc1f5c5-5bfc-481c-bac8-cdfffb12f5bf\", \n\t\t\t\"code\": \"w44h83c6\", \n\t\t\t\"customCode\": \"z1m3nz4cup\", \n\t\t\t\"name\": \"Generic Granite Chair\", \n\t\t\t\"slug\": \"quo-esse-quis\", \n\t\t\t\"latitude\": 70997794492136320, \n\t\t\t\"longitude\": 70421651398095290, \n\t\t\t\"zoom\": 17\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a7447569-ea08-4ff4-a0ed-39dce48d8ce9\", \n\t\t\t\"countryId\": \"047cda07-b879-4e1c-93fa-0ad54d515873\", \n\t\t\t\"code\": \"7uj1332d\", \n\t\t\t\"customCode\": \"bcgxobe67o\", \n\t\t\t\"name\": \"Rustic Wooden Pants\", \n\t\t\t\"slug\": \"neque-ab-omnis\", \n\t\t\t\"latitude\": 94341239717028540, \n\t\t\t\"longitude\": 31886329598088616, \n\t\t\t\"zoom\": 23\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"91af3850-6f22-4c53-bc9f-d851445d20e4\", \n\t\t\t\"countryId\": \"0e4bb581-933f-49fb-8152-8a8d8be63eb5\", \n\t\t\t\"code\": \"4u0f4pq4\", \n\t\t\t\"customCode\": \"1dln04fu9o\", \n\t\t\t\"name\": \"Rustic Granite Tuna\", \n\t\t\t\"slug\": \"aut-et-quidem\", \n\t\t\t\"latitude\": 57177316613410024, \n\t\t\t\"longitude\": 14219830104390908, \n\t\t\t\"zoom\": 26\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"111c02ab-4762-4b94-bfb4-1dac6ff8d07a\", \n\t\t\t\"countryId\": \"5e0f3f19-1cce-4b4a-ac8f-dc24a569839b\", \n\t\t\t\"code\": \"ruitjst4\", \n\t\t\t\"customCode\": \"lojl4ud57v\", \n\t\t\t\"name\": \"Awesome Steel Bike\", \n\t\t\t\"slug\": \"et-omnis-temporibus\", \n\t\t\t\"latitude\": 44439148148804720, \n\t\t\t\"longitude\": 23159447591868904, \n\t\t\t\"zoom\": 63\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"c72d41d6-be00-489a-ad06-3ad10477f47c\", \n\t\t\t\"countryId\": \"d505d18f-27ba-4616-91f6-a310a7aefe52\", \n\t\t\t\"code\": \"2fougsi5\", \n\t\t\t\"customCode\": \"eh0pcsg40l\", \n\t\t\t\"name\": \"Incredible Wooden Chair\", \n\t\t\t\"slug\": \"voluptas-a-qui\", \n\t\t\t\"latitude\": 94135407127812100, \n\t\t\t\"longitude\": 87823947695366860, \n\t\t\t\"zoom\": 55\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"7c13b346-3e48-4c6d-a014-4e9c57ce1bc3\", \n\t\t\t\"countryId\": \"f138c96d-7e69-45ce-ab88-cd16738ff465\", \n\t\t\t\"code\": \"aue0she4\", \n\t\t\t\"customCode\": \"pqoff3qro0\", \n\t\t\t\"name\": \"Handcrafted Cotton Tuna\", \n\t\t\t\"slug\": \"ex-laborum-qui\", \n\t\t\t\"latitude\": 34137339569031548, \n\t\t\t\"longitude\": 91383329853227410, \n\t\t\t\"zoom\": 94\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"1a0025db-46c2-413e-9a65-94ec8231b626\", \n\t\t\t\"countryId\": \"fe112acb-4848-49f5-9dff-aaed9e1eea88\", \n\t\t\t\"code\": \"19ooqo2d\", \n\t\t\t\"customCode\": \"1ocl8lbcje\", \n\t\t\t\"name\": \"Small Frozen Sausages\", \n\t\t\t\"slug\": \"dolores-et-labore\", \n\t\t\t\"latitude\": 45993930047731816, \n\t\t\t\"longitude\": 45443911042300440, \n\t\t\t\"zoom\": 20\n\t\t}\n\t]\n}"
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"3fc17803-15f0-435d-aa68-1b4f47e95c3f\", \n\t\t\t\"countryId\": \"ae12b5ed-d10f-4cca-8a4c-899020a41bd8\", \n\t\t\t\"code\": \"f0codo4\", \n\t\t\t\"customCode\": \"aj98zqa72\", \n\t\t\t\"name\": \"Practical Fresh Cheese\", \n\t\t\t\"slug\": \"suscipit-dolorum-nobis\", \n\t\t\t\"latitude\": 6270528604877.889, \n\t\t\t\"longitude\": 1388335967410.85, \n\t\t\t\"zoom\": 6\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"96d30c7f-5dce-4082-b283-d989fd429747\", \n\t\t\t\"countryId\": \"5d7c8bfb-f1cf-4cbe-961e-20467cf15d74\", \n\t\t\t\"code\": \"6mfq4zw\", \n\t\t\t\"customCode\": \"4nlk522y8\", \n\t\t\t\"name\": \"Licensed Concrete Salad\", \n\t\t\t\"slug\": \"non-et-ut\", \n\t\t\t\"latitude\": 8700118936452.732, \n\t\t\t\"longitude\": 2065931817544.662, \n\t\t\t\"zoom\": 2\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"0081665f-9e97-41a8-9d85-c786a31e61c7\", \n\t\t\t\"countryId\": \"c587168a-7df5-44c7-a54d-df5752dbb624\", \n\t\t\t\"code\": \"9jlpxlx\", \n\t\t\t\"customCode\": \"ok92prnu0\", \n\t\t\t\"name\": \"Intelligent Plastic Hat\", \n\t\t\t\"slug\": \"qui-aperiam-harum\", \n\t\t\t\"latitude\": 6734091995956.797, \n\t\t\t\"longitude\": 9272779703536.898, \n\t\t\t\"zoom\": 1\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a95f8e23-ec7d-4bdb-a5f2-7fa61cffb63d\", \n\t\t\t\"countryId\": \"476f4e87-87e2-48ad-8365-da6e9f631919\", \n\t\t\t\"code\": \"2ka99f9\", \n\t\t\t\"customCode\": \"1g30kf5hh\", \n\t\t\t\"name\": \"Intelligent Concrete Shirt\", \n\t\t\t\"slug\": \"qui-officia-quia\", \n\t\t\t\"latitude\": 5446255598075.337, \n\t\t\t\"longitude\": 4827994332610.593, \n\t\t\t\"zoom\": 7\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"1c598fd6-1e9f-4c13-9f43-c8a2f4f3b38e\", \n\t\t\t\"countryId\": \"2a804218-d4fb-4dc5-82f0-9c70490037a1\", \n\t\t\t\"code\": \"5u5tnax\", \n\t\t\t\"customCode\": \"jrtiq8plr\", \n\t\t\t\"name\": \"Small Plastic Chips\", \n\t\t\t\"slug\": \"ut-illo-in\", \n\t\t\t\"latitude\": 6475136114380.591, \n\t\t\t\"longitude\": 4079370441158.257, \n\t\t\t\"zoom\": 5\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"86b66fb1-89d9-4032-8832-3ccb64f91765\", \n\t\t\t\"countryId\": \"13bbd14e-db9a-4e21-b9e2-75a4d1d33a99\", \n\t\t\t\"code\": \"0diuehr\", \n\t\t\t\"customCode\": \"usv53aoi1\", \n\t\t\t\"name\": \"Generic Soft Sausages\", \n\t\t\t\"slug\": \"sunt-ut-rerum\", \n\t\t\t\"latitude\": 3842640492404.3965, \n\t\t\t\"longitude\": 6302187102799.858, \n\t\t\t\"zoom\": 7\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"45dc2685-8a90-4174-9a5a-a1faf9f20cdb\", \n\t\t\t\"countryId\": \"ea1640f6-67e8-4ed1-b99e-e6e942ff834f\", \n\t\t\t\"code\": \"o21xxli\", \n\t\t\t\"customCode\": \"ljtt4viwa\", \n\t\t\t\"name\": \"Refined Granite Chicken\", \n\t\t\t\"slug\": \"qui-quasi-voluptatem\", \n\t\t\t\"latitude\": 3578481750326.5615, \n\t\t\t\"longitude\": 3496086829021.404, \n\t\t\t\"zoom\": 9\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"63f2c0d5-bdc6-4628-aaa9-acf96d2333b0\", \n\t\t\t\"countryId\": \"3a43a1ed-86a2-40fc-8358-8df04ea0a165\", \n\t\t\t\"code\": \"xghw06i\", \n\t\t\t\"customCode\": \"iny0fobmv\", \n\t\t\t\"name\": \"Handmade Plastic Pants\", \n\t\t\t\"slug\": \"enim-vitae-omnis\", \n\t\t\t\"latitude\": 1792078542838.3523, \n\t\t\t\"longitude\": 8270599199335.585, \n\t\t\t\"zoom\": 2\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"b89f2b12-639c-44d8-8202-5a6c75e790eb\", \n\t\t\t\"countryId\": \"f72f3942-f050-4133-b58b-d60a5ca53e3d\", \n\t\t\t\"code\": \"onyravw\", \n\t\t\t\"customCode\": \"4nmlh2c8b\", \n\t\t\t\"name\": \"Handmade Metal Sausages\", \n\t\t\t\"slug\": \"quas-temporibus-laboriosam\", \n\t\t\t\"latitude\": 9329016760096.785, \n\t\t\t\"longitude\": 8761550014062.891, \n\t\t\t\"zoom\": 6\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"a68241ff-fcd2-40c3-804e-fe1003011229\", \n\t\t\t\"countryId\": \"6bba641c-cc7c-4eab-bb18-b476009475c6\", \n\t\t\t\"code\": \"1dxumjv\", \n\t\t\t\"customCode\": \"lk8wq72s1\", \n\t\t\t\"name\": \"Small Frozen Chips\", \n\t\t\t\"slug\": \"vel-sit-doloremque\", \n\t\t\t\"latitude\": 8244719206886.477, \n\t\t\t\"longitude\": 6767619495525.568, \n\t\t\t\"zoom\": 4\n\t\t}\n\t]\n}"
 					}
 				},
 				"url": {
@@ -164,7 +164,7 @@
 					"mode": "graphql",
 					"graphql": {
 						"query": "mutation ($payload:CommonUpdateAdministrativeAreaLevel1Input!)\n{\n\tcommonUpdateAdministrativeAreaLevel1 (payload:$payload)\n\t{\n\t\tid\n\t\tcode\n\t\tcustomCode\n\t\tname\n\t\tslug\n\t\tlatitude\n\t\tlongitude\n\t\tzoom\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
-						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"ur8kc8vk\", \n\t\t\"customCode\": \"8y9r87nnfi\", \n\t\t\"name\": \"Sleek Fresh Shoes\", \n\t\t\"slug\": \"officiis-aut-et\", \n\t\t\"latitude\": 77021566633815100, \n\t\t\"longitude\": 65330509183218240, \n\t\t\"zoom\": 78\n\t}\n}"
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"code\": \"l7fxsmr\", \n\t\t\"customCode\": \"cpk9xvkmm\", \n\t\t\"name\": \"Practical Wooden Computer\", \n\t\t\"slug\": \"rerum-facere-veritatis\", \n\t\t\"latitude\": 6083872361553.408, \n\t\t\"longitude\": 6509445456292.584, \n\t\t\"zoom\": 8\n\t}\n}"
 					}
 				},
 				"url": {
@@ -230,7 +230,7 @@
 			"response": []
         },
         {
-			"name": "REST - common/administrative-area-level-1",
+			"name": "REST - common/administrative-area-level-1/create",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -242,7 +242,7 @@
 					}				],
 				"body": {
 					"mode"  : "raw",
-					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"xabmitru\", \n\t\"customCode\": \"w3nwp6wgtu\", \n\t\"name\": \"Unbranded Cotton Shirt\", \n\t\"slug\": \"dolorum-saepe-cupiditate\", \n\t\"latitude\": 19067317858603664, \n\t\"longitude\": 44133971424066140, \n\t\"zoom\": 41\n}",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"twac36m\", \n\t\"customCode\": \"osu94cuzw\", \n\t\"name\": \"Unbranded Soft Chair\", \n\t\"slug\": \"et-laboriosam-rerum\", \n\t\"latitude\": 4152741489017.4453, \n\t\"longitude\": 8719373807657.903, \n\t\"zoom\": 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -250,20 +250,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-area-level-1",
+					"raw": "{{URL}}/common/administrative-area-level-1/create",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-area-level-1"
+						"administrative-area-level-1",
+                        "create"
 					]
 				}
 			},
 			"response": []
         },
         {
-			"name": "REST - common/administrative-areas-level-1",
+			"name": "REST - common/administrative-areas-level-1/create",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -275,7 +276,7 @@
 					}				],
 				"body": {
 					"mode"  : "raw",
-					"raw"   : "[\n\t{\n\t\t\"id\": \"baa25bc8-9d00-4bd9-9386-cadcd02a27ab\", \n\t\t\"countryId\": \"96a638e7-84aa-48a3-89ec-afca19919966\", \n\t\t\"code\": \"3yl9pgku\", \n\t\t\"customCode\": \"6qc06qzw53\", \n\t\t\"name\": \"Sleek Cotton Car\", \n\t\t\"slug\": \"vero-voluptatum-quas\", \n\t\t\"latitude\": 41317637504153896, \n\t\t\"longitude\": 72850591250589630, \n\t\t\"zoom\": 91\n\t}, \n\t{\n\t\t\"id\": \"408042ec-7d37-4916-84b5-4d9573f249ee\", \n\t\t\"countryId\": \"277e6f45-ec6c-4081-919f-8065e22cce29\", \n\t\t\"code\": \"l5rbxp8u\", \n\t\t\"customCode\": \"dv3n7v5v7c\", \n\t\t\"name\": \"Practical Metal Mouse\", \n\t\t\"slug\": \"eum-aliquam-pariatur\", \n\t\t\"latitude\": 67003410802620296, \n\t\t\"longitude\": 40882022401047790, \n\t\t\"zoom\": 62\n\t}, \n\t{\n\t\t\"id\": \"9ce1ee50-d4e4-4a67-abdb-46a15b75859e\", \n\t\t\"countryId\": \"818610cb-2cfb-4a01-b986-ab1a86b4e75e\", \n\t\t\"code\": \"fcsfrlvc\", \n\t\t\"customCode\": \"z8isok6h8r\", \n\t\t\"name\": \"Awesome Granite Gloves\", \n\t\t\"slug\": \"esse-et-aut\", \n\t\t\"latitude\": 33132899513147430, \n\t\t\"longitude\": 26842180265698550, \n\t\t\"zoom\": 32\n\t}, \n\t{\n\t\t\"id\": \"0ffd2f99-7b07-4a63-a2fa-f5aaad29e8e5\", \n\t\t\"countryId\": \"e203504c-cafb-49da-b6b9-1f2c18afdff1\", \n\t\t\"code\": \"1zohypai\", \n\t\t\"customCode\": \"5cvjhzda5t\", \n\t\t\"name\": \"Refined Fresh Shirt\", \n\t\t\"slug\": \"ea-deserunt-est\", \n\t\t\"latitude\": 22627060028397120, \n\t\t\"longitude\": 93265655076937700, \n\t\t\"zoom\": 29\n\t}, \n\t{\n\t\t\"id\": \"57962070-44c5-4ac0-94e8-5b1c511b790d\", \n\t\t\"countryId\": \"3cfa14d2-e599-4098-bc26-a058276b02e1\", \n\t\t\"code\": \"aw0fno3n\", \n\t\t\"customCode\": \"572yj727nx\", \n\t\t\"name\": \"Gorgeous Steel Shirt\", \n\t\t\"slug\": \"quia-ut-dolor\", \n\t\t\"latitude\": 13821855098646962, \n\t\t\"longitude\": 90399513953625700, \n\t\t\"zoom\": 22\n\t}, \n\t{\n\t\t\"id\": \"efa38df7-261f-4873-a328-8ba294438648\", \n\t\t\"countryId\": \"d1a165c4-56af-4777-855e-acd94b9ba8c6\", \n\t\t\"code\": \"mekfqpsp\", \n\t\t\"customCode\": \"yk4vsot3tj\", \n\t\t\"name\": \"Fantastic Wooden Keyboard\", \n\t\t\"slug\": \"ea-sunt-reprehenderit\", \n\t\t\"latitude\": 48811496400570030, \n\t\t\"longitude\": 87256176842832220, \n\t\t\"zoom\": 91\n\t}, \n\t{\n\t\t\"id\": \"c6e012bf-a4f8-4d22-b082-81ef1bdaf0dd\", \n\t\t\"countryId\": \"7ba90a8d-5996-4275-b465-a511fad8e47a\", \n\t\t\"code\": \"u40jqicn\", \n\t\t\"customCode\": \"yfujdw0qey\", \n\t\t\"name\": \"Fantastic Metal Shirt\", \n\t\t\"slug\": \"dolor-et-libero\", \n\t\t\"latitude\": 83732101121763780, \n\t\t\"longitude\": 26272866562814332, \n\t\t\"zoom\": 47\n\t}, \n\t{\n\t\t\"id\": \"d4c5c3a3-d82f-4d8d-819d-ecea480dd2d6\", \n\t\t\"countryId\": \"73b3350d-d694-4201-a015-51f33c33e64b\", \n\t\t\"code\": \"7bh8uia4\", \n\t\t\"customCode\": \"snmtprnqrv\", \n\t\t\"name\": \"Tasty Soft Shirt\", \n\t\t\"slug\": \"est-quo-ut\", \n\t\t\"latitude\": 97091827622169180, \n\t\t\"longitude\": 85751068078585630, \n\t\t\"zoom\": 95\n\t}, \n\t{\n\t\t\"id\": \"856a2699-7cc2-44b2-bc7a-8b1d320de9ba\", \n\t\t\"countryId\": \"57c6f41b-647f-4033-b276-86a14652863f\", \n\t\t\"code\": \"g6n5axcd\", \n\t\t\"customCode\": \"a4je9zox23\", \n\t\t\"name\": \"Generic Cotton Gloves\", \n\t\t\"slug\": \"a-necessitatibus-placeat\", \n\t\t\"latitude\": 34916009396733772, \n\t\t\"longitude\": 80693142837212110, \n\t\t\"zoom\": 58\n\t}, \n\t{\n\t\t\"id\": \"90d79a49-26a8-479e-8372-522c512c2b5e\", \n\t\t\"countryId\": \"eb4d1d2a-12a1-494a-9cc9-82d5e0484587\", \n\t\t\"code\": \"yb9nlt3o\", \n\t\t\"customCode\": \"zvnfia9707\", \n\t\t\"name\": \"Gorgeous Frozen Car\", \n\t\t\"slug\": \"facere-corporis-inventore\", \n\t\t\"latitude\": 27583891203755276, \n\t\t\"longitude\": 59519964386092510, \n\t\t\"zoom\": 33\n\t}\n]",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"a2cbd194-bf68-44d6-8d03-1bfebf0e3248\", \n\t\t\"countryId\": \"7e9dfbf6-2aca-48f4-8c31-7a0cd642a3ff\", \n\t\t\"code\": \"7ra1sb9\", \n\t\t\"customCode\": \"1e8ztiq8v\", \n\t\t\"name\": \"Handmade Rubber Gloves\", \n\t\t\"slug\": \"laborum-recusandae-et\", \n\t\t\"latitude\": 4704808410033.653, \n\t\t\"longitude\": 3729972425609.237, \n\t\t\"zoom\": 7\n\t}, \n\t{\n\t\t\"id\": \"cae40b23-f3d2-4d56-84c6-17d968d51a80\", \n\t\t\"countryId\": \"7396e2d0-ada8-40bb-a750-25a5644f86f6\", \n\t\t\"code\": \"0ui5vm0\", \n\t\t\"customCode\": \"lpq144q8k\", \n\t\t\"name\": \"Handmade Steel Cheese\", \n\t\t\"slug\": \"voluptatum-magni-esse\", \n\t\t\"latitude\": 4226047053687.6353, \n\t\t\"longitude\": 4598794558508.835, \n\t\t\"zoom\": 9\n\t}, \n\t{\n\t\t\"id\": \"2913e698-e926-4bea-a207-66db76d99a45\", \n\t\t\"countryId\": \"743e20a1-31c2-4c08-90f7-9ad1f083305a\", \n\t\t\"code\": \"2zrancm\", \n\t\t\"customCode\": \"u4dny1dd5\", \n\t\t\"name\": \"Refined Wooden Shoes\", \n\t\t\"slug\": \"provident-at-dolor\", \n\t\t\"latitude\": 6442455975067.462, \n\t\t\"longitude\": 4840301644631.665, \n\t\t\"zoom\": 4\n\t}, \n\t{\n\t\t\"id\": \"3766e470-2e9d-4e75-875e-ed87166412bf\", \n\t\t\"countryId\": \"a90826de-4048-4db3-b73d-56345ccb1677\", \n\t\t\"code\": \"3kjk179\", \n\t\t\"customCode\": \"vv4mmpcfi\", \n\t\t\"name\": \"Licensed Fresh Pizza\", \n\t\t\"slug\": \"autem-voluptas-porro\", \n\t\t\"latitude\": 5453804562996.655, \n\t\t\"longitude\": 3917076855706.2983, \n\t\t\"zoom\": 4\n\t}, \n\t{\n\t\t\"id\": \"68e2bef1-dfb9-4c28-a9c7-3e7f820e4761\", \n\t\t\"countryId\": \"457bbbd3-7efb-48de-87c1-d60a8723875c\", \n\t\t\"code\": \"68gzefh\", \n\t\t\"customCode\": \"la7pmhlcj\", \n\t\t\"name\": \"Awesome Soft Shoes\", \n\t\t\"slug\": \"hic-tempore-nihil\", \n\t\t\"latitude\": 9332099627370.732, \n\t\t\"longitude\": 9331626446397.418, \n\t\t\"zoom\": 2\n\t}, \n\t{\n\t\t\"id\": \"46a7749f-b3e3-448a-bc1d-ffb90f20b724\", \n\t\t\"countryId\": \"b90b04c6-cd6e-41d8-be9d-7dba780a90de\", \n\t\t\"code\": \"0801zu1\", \n\t\t\"customCode\": \"wvm7gdt1j\", \n\t\t\"name\": \"Refined Frozen Hat\", \n\t\t\"slug\": \"vel-qui-consequatur\", \n\t\t\"latitude\": 2521785993234.1875, \n\t\t\"longitude\": 6086300460495.739, \n\t\t\"zoom\": 8\n\t}, \n\t{\n\t\t\"id\": \"4fc8f639-a614-4ab9-bc40-fe55c2771c6e\", \n\t\t\"countryId\": \"42c3bd60-0370-4598-8d8f-22a818dcd771\", \n\t\t\"code\": \"ff8ikup\", \n\t\t\"customCode\": \"djmpulceo\", \n\t\t\"name\": \"Rustic Steel Pizza\", \n\t\t\"slug\": \"omnis-est-iste\", \n\t\t\"latitude\": 7026125236804.537, \n\t\t\"longitude\": 9278312220583.258, \n\t\t\"zoom\": 7\n\t}, \n\t{\n\t\t\"id\": \"293790f8-c191-4e60-8fe3-2804dfdfeb10\", \n\t\t\"countryId\": \"f905738f-25d7-4d8c-95d2-85b871457735\", \n\t\t\"code\": \"sz0tjto\", \n\t\t\"customCode\": \"c1v6ajw89\", \n\t\t\"name\": \"Incredible Granite Bacon\", \n\t\t\"slug\": \"perspiciatis-est-non\", \n\t\t\"latitude\": 9637235987359.67, \n\t\t\"longitude\": 4297600074552.5903, \n\t\t\"zoom\": 7\n\t}, \n\t{\n\t\t\"id\": \"4c934db9-dc1d-4019-9510-34655f81c980\", \n\t\t\"countryId\": \"54df76ee-bad4-4c66-9cdf-56fdd8c049b2\", \n\t\t\"code\": \"gnu0q9s\", \n\t\t\"customCode\": \"uur8jelb6\", \n\t\t\"name\": \"Awesome Frozen Soap\", \n\t\t\"slug\": \"ea-tempora-nesciunt\", \n\t\t\"latitude\": 8872575150732.51, \n\t\t\"longitude\": 4693880061642.869, \n\t\t\"zoom\": 3\n\t}, \n\t{\n\t\t\"id\": \"be0a4b83-96f1-4a7f-976b-a2938cfb5942\", \n\t\t\"countryId\": \"175e39a0-76f2-4d46-9da0-57d34aa28119\", \n\t\t\"code\": \"ddtsm5s\", \n\t\t\"customCode\": \"mqpenzxdk\", \n\t\t\"name\": \"Licensed Plastic Hat\", \n\t\t\"slug\": \"dolorum-quisquam-qui\", \n\t\t\"latitude\": 7324027813424.718, \n\t\t\"longitude\": 5703498768514.78, \n\t\t\"zoom\": 7\n\t}\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -283,13 +284,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"raw": "{{URL}}/common/administrative-areas-level-1/create",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-areas-level-1"
+						"administrative-areas-level-1",
+                        "create"
 					]
 				}
 			},
@@ -333,12 +335,12 @@
 			"response": []
         },
         {
-			"name": "REST - common/administrative-areas-level-1",
+			"name": "REST - common/administrative-areas-level-1/get",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -356,25 +358,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"raw": "{{URL}}/common/administrative-areas-level-1/get",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-areas-level-1"
+						"administrative-areas-level-1",
+                        "get"
 					]
 				}
 			},
 			"response": []
         },
         {
-			"name": "REST - common/administrative-area-level-1",
+			"name": "REST - common/administrative-area-level-1/find",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -392,20 +395,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-area-level-1",
+					"raw": "{{URL}}/common/administrative-area-level-1/find",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-area-level-1"
+						"administrative-area-level-1",
+                        "find"
 					]
 				}
 			},
 			"response": []
         },
         {
-			"name": "REST - common/administrative-area-level-1/{id}",
+			"name": "REST - common/administrative-area-level-1/find/{id}",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -428,13 +432,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-area-level-1/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"raw": "{{URL}}/common/administrative-area-level-1/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
 						"administrative-area-level-1",
+                        "find",
 						"5b19d6ac-4081-573b-96b3-56964d5326a8"
 					]
 				}
@@ -442,7 +447,7 @@
 			"response": []
         },
         {
-			"name": "REST - common/administrative-area-level-1",
+			"name": "REST - common/administrative-area-level-1/update",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -454,7 +459,7 @@
 					}				],
 				"body": {
 					"mode": "raw",
-					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"am0rtljw\", \n\t\"customCode\": \"tkuu763sd1\", \n\t\"name\": \"Gorgeous Plastic Tuna\", \n\t\"slug\": \"magni-totam-fugiat\", \n\t\"latitude\": 61463623334659340, \n\t\"longitude\": 92650942930349380, \n\t\"zoom\": 69\n}",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"countryId\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"code\": \"z1r2yww\", \n\t\"customCode\": \"1sm2075rv\", \n\t\"name\": \"Fantastic Metal Salad\", \n\t\"slug\": \"dolore-repudiandae-voluptatibus\", \n\t\"latitude\": 4823575983642.681, \n\t\"longitude\": 1696682175389.4275, \n\t\"zoom\": 5\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -462,20 +467,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-area-level-1",
+					"raw": "{{URL}}/common/administrative-area-level-1/update",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-area-level-1"
+						"administrative-area-level-1",
+                        "update"
 					]
 				}
 			},
 			"response": []
         },
         {
-			"name": "REST - common/administrative-area-level-1/{id}",
+			"name": "REST - common/administrative-area-level-1/delete/{id}",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -495,13 +501,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-area-level-1/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"raw": "{{URL}}/common/administrative-area-level-1/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
 						"administrative-area-level-1",
+                        "delete",
 						"5b19d6ac-4081-573b-96b3-56964d5326a8"
 					]
 				}
@@ -509,7 +516,7 @@
 			"response": []
 		},
         {
-			"name": "REST - common/administrative-areas-level-1",
+			"name": "REST - common/administrative-areas-level-1/delete",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -529,13 +536,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/common/administrative-areas-level-1",
+					"raw": "{{URL}}/common/administrative-areas-level-1/delete",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"common",
-						"administrative-areas-level-1"
+						"administrative-areas-level-1",
+                        "delete"
 					]
 				}
 			},
@@ -544,7 +552,7 @@
     ],
     "variable": [
 		{
-			"id": "f41ae124-714f-40f2-a9d9-0af4efe002f8",
+			"id": "b4a75c10-7e9c-4d07-81da-9170a81eeda4",
 			"key": "URL",
 			"value": "http://localhost:8080",
 			"type": "string"

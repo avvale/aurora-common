@@ -1,5 +1,6 @@
 
-import { IRepository, ObjectLiteral, QueryStatement } from 'aurora-ts-core';
+import { LiteralObject } from '@nestjs/common';
+import { IRepository, QueryStatement } from 'aurora-ts-core';
 import { CQMetadata, Pagination } from 'aurora-ts-core';
 import { CommonCountry } from './country.aggregate';
 import { CountryId } from './value-objects';
@@ -61,8 +62,8 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
     abstract create(
         country: CommonCountry,
         options?: {
-            dataFactory?: (aggregate: CommonCountry) => ObjectLiteral;
-            finderQueryStatement: (aggregate: CommonCountry) => QueryStatement;
+            dataFactory?: (aggregate: CommonCountry) => LiteralObject;
+            finderQueryStatement?: (aggregate: CommonCountry) => QueryStatement;
         }
     ): Promise<void>;
 
@@ -70,8 +71,8 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
     abstract insert(
         countries: CommonCountry[],
         options?: {
-            insertOptions?: ObjectLiteral;
-            dataFactory?: (aggregate: CommonCountry) => ObjectLiteral;
+            insertOptions?: LiteralObject;
+            dataFactory?: (aggregate: CommonCountry) => LiteralObject;
         }
     ): Promise<void>;
 
@@ -81,8 +82,8 @@ export abstract class ICountryI18NRepository implements IRepository<CommonCountr
         options?: {
             constraint?: QueryStatement;
             cQMetadata?: CQMetadata;
-            dataFactory?: (aggregate: CommonCountry) => ObjectLiteral;
-            findArguments?: ObjectLiteral;
+            dataFactory?: (aggregate: CommonCountry) => LiteralObject;
+            findArguments?: LiteralObject;
         }
     ): Promise<void>;
 

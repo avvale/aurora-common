@@ -1,15 +1,15 @@
 import { Resolver, Args, Query } from '@nestjs/graphql';
-import { Constraint, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
+import { Constraint, QueryStatement, Timezone } from 'aurora-ts-core';
 
 // @apps
-import { FindAdministrativeAreaLevel2ByIdQuery } from '../../../../@apps/common/administrative-area-level-2/application/find/find-administrative-area-level-2-by-id.query';
-import { CommonAdministrativeAreaLevel2 } from './../../../../graphql';
+import { CommonFindAdministrativeAreaLevel2ByIdHandler } from '../handlers/common-find-administrative-area-level-2-by-id.handler';
+import { CommonAdministrativeAreaLevel2 } from '../../../../graphql';
 
 @Resolver()
 export class CommonFindAdministrativeAreaLevel2ByIdResolver
 {
     constructor(
-        private readonly queryBus: IQueryBus,
+        private readonly handler: CommonFindAdministrativeAreaLevel2ByIdHandler,
     ) {}
 
     @Query('commonFindAdministrativeAreaLevel2ById')
@@ -19,6 +19,10 @@ export class CommonFindAdministrativeAreaLevel2ByIdResolver
         @Timezone() timezone?: string,
     ): Promise<CommonAdministrativeAreaLevel2>
     {
-        return await this.queryBus.ask(new FindAdministrativeAreaLevel2ByIdQuery(id, constraint, { timezone }));
+        return await this.handler.main(
+            id,
+            constraint,
+            timezone,
+        );
     }
 }

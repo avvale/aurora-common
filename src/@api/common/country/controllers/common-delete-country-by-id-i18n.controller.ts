@@ -1,11 +1,11 @@
 import { Controller, Param, Delete } from '@nestjs/common';
 import { ApiTags, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 import { AddI18NConstraintService, Constraint, ContentLanguage, ICommandBus, IQueryBus, QueryStatement, Timezone } from 'aurora-ts-core';
-import { CountryDto } from './../dto/country.dto';
+import { CountryDto } from '../dto/country.dto';
 
 // @apps
-import { FindCountryByIdQuery } from '../../../../@apps/common/country/application/find/find-country-by-id.query';
-import { DeleteCountryByIdI18NCommand } from '../../../../@apps/common/country/application/delete/delete-country-by-id-i18n.command';
+import { FindCountryByIdQuery } from '@apps/common/country/application/find/find-country-by-id.query';
+import { DeleteCountryByIdI18NCommand } from '@apps/common/country/application/delete/delete-country-by-id-i18n.command';
 
 @ApiTags('[common] country')
 @Controller('common/country-i18n')
